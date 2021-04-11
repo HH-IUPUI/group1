@@ -15,6 +15,7 @@ headers: font-family: 'RocknRoll One', sans-serif;
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -48,20 +49,12 @@ h6 {
 
 /* nav styles */
 
-/* .headerNav{
-    background-color: pink;
-    padding-bottom: 0.5rem;
-    width: 13rem;
-    z-index: 100;
-    position: fixed;
-} */
-
-.navCheckbox {
+.navigation__checkbox {
   display: none;
 }
 
-.navButton {
-  background-color: white;
+.navigation__btn {
+  background-color: #fff;
   height: 7rem;
   width: 7rem;
   position: fixed;
@@ -69,21 +62,23 @@ h6 {
   right: 6rem;
   border-radius: 50%;
   z-index: 2000;
-  box-shadow: 0 1rem 3rem rgba(white, 0.1);
+  -webkit-box-shadow: 0 1rem 3rem rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1rem 3rem rgba(255, 255, 255, 0.1);
   text-align: center;
   cursor: pointer;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
 @media only screen and (max-width: 56.25em) {
-  .navButton {
+  .navigation__btn {
     top: 3rem;
     right: 3rem;
   }
 }
 
 @media only screen and (max-width: 37.5em) {
-  .navButton {
+  .navigation__btn {
     height: 5rem;
     width: 5rem;
     top: 1rem;
@@ -91,128 +86,182 @@ h6 {
   }
 }
 
-.navBackground {
+.navigation__background {
   height: 6rem;
   width: 6rem;
-  border: 50%;
+  border-radius: 50%;
   position: fixed;
   top: 6.5rem;
   right: 6.5rem;
-  background-image: radial-gradient(pink, red);
+  background-image: radial-gradient(#7ed56f, #28b485);
   z-index: 1000;
+  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1),
+    -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
-.headerNav {
+@media only screen and (max-width: 56.25em) {
+  .navigation__background {
+    top: 3.5rem;
+    right: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .navigation__background {
+    height: 4rem;
+    width: 4rem;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+.navigation__nav {
   height: 100vh;
   width: 100%;
   position: fixed;
   top: 0;
   right: 0;
   z-index: 1500;
+  -webkit-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
   opacity: 0;
   width: 0;
 }
 
-.headerNavList {
+.navigation__list {
   width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
-  transition: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   list-style: none;
   text-align: center;
 }
 
-.headerNavItem {
+.navigation__item {
   margin: 1rem;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
-.headerNavLink,
-:link,
-:visited {
+.navigation__link:link,
+.navigation__link:visited {
   display: inline-block;
   font-size: 3rem;
+  font-weight: 300;
   padding: 1rem 2rem;
-  color: white;
+  color: #fff;
   text-decoration: none;
   text-transform: uppercase;
   background-image: linear-gradient(
     120deg,
     transparent 0%,
     transparent 50%,
-    white 50%
+    #fff 50%
   );
   background-size: 240%;
+  -webkit-transition: all 0.8s;
   transition: all 0.8s;
 }
 
-.headerNavLink:hover,
-:active {
-  background-position: 100%;
-  color: pink;
-  transition: translateY(1rem);
+.navigation__link:link span,
+.navigation__link:visited span {
+  margin-right: 1.5rem;
+  display: inline-block;
 }
 
-/* make nav button pop out */
-.navCheckbox:checked ~ .navBackground {
+.navigation__link:hover,
+.navigation__link:active {
+  background-position: 100%;
+  color: #55c57a;
+  -webkit-transform: translateY(1rem);
+  transform: translateY(1rem);
+}
+
+.navigation__checkbox:checked ~ .navigation__background {
+  -webkit-transform: scale(80);
+  transform: scale(80);
+}
+
+.navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
   width: 100%;
 }
 
-/* .navIcon{
-    position: relative;
-    margin-top: 3.25rem;
+.navigation__icon {
+  position: relative;
+  margin-top: 3.25rem;
 }
 
-.navIcon, ::before, ::after{
-    width: 3rem;
-    height: 2px;
-    background-color: grey;
-    display: inline-block;
+@media only screen and (max-width: 37.5em) {
+  .navigation__icon {
+    margin-top: 2.5rem;
+  }
 }
 
-.navIcon::before, ::after{
-    content: "";
-    position: absolute;
-    left: 0;
+.navigation__icon,
+.navigation__icon::before,
+.navigation__icon::after {
+  width: 3rem;
+  height: 2px;
+  background-color: #333;
+  display: inline-block;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
-.navIcon::before{
-    top: -0.8rem;
+@media only screen and (max-width: 37.5em) {
+  .navigation__icon,
+  .navigation__icon::before,
+  .navigation__icon::after {
+    width: 2.5rem;
+  }
 }
 
-.navIcon::after{
-    top: 0.8rem;
+.navigation__icon::before,
+.navigation__icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
 }
 
-.navButton:hover, .navIcon::before{
-    top: -1rem;
+.navigation__icon::before {
+  top: -0.8rem;
 }
 
-.navButton:hover, .navIcon::after{
-    top: 1rem;
+.navigation__icon::after {
+  top: 0.8rem;
 }
 
-.navCheckbox:checked + .navButton, .navIcon{
-    background-color: transparent;
+.navigation__btn:hover .navigation__icon::before {
+  top: -1rem;
 }
 
-.navCheckbox:checked + .navButton, .navIcon::after{
-    top: 0;
-    transform: rotate(135deg);
+.navigation__btn:hover .navigation__icon::after {
+  top: 1rem;
 }
 
+.navigation__checkbox:checked + .navigation__btn .navigation__icon {
+  background-color: transparent;
+}
 
-.navCheckbox:checked + .navButton, .navIcon::before{
-    top: 0;
-    transform: rotate(-135deg);
-} */
+.navigation__checkbox:checked + .navigation__btn .navigation__icon::after {
+  top: 0;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
 
-.mainContainer {
+.navigation__checkbox:checked + .navigation__btn .navigation__icon::before {
+  top: 0;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.main__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -220,17 +269,21 @@ h6 {
   padding: 3rem;
 }
 
-.mainGeneralFacts {
+.main__content {
   display: flex;
   flex-direction: column;
 }
 
-.mainContentHeader {
+.main__content--header {
   align-self: center;
   padding-bottom: 1.5rem;
 }
 
-.mainContentImg {
+.main__content--para{
+  
+}
+
+.main__content--img {
   width: 30rem;
   padding: 1rem;
 }

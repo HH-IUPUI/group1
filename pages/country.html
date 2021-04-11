@@ -14,6 +14,12 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="shortcut icon"
+      href="../images/favicon.ico"
+      type="image/x-icon"
+    />
+
     <!-- add info here -->
     <meta name="author" content="Shannon Schrauwen" />
     <meta
@@ -27,39 +33,48 @@
     <link rel="stylesheet" href="/styles/overallStyles.css" />
   </head>
   <body>
+    <!-- This navigation button and animation was taken from a website course I did previously - Advanced CSS and SCSS -->
     <div class="navigation">
-      <input type="checkbox" class="navCheckbox" id="navToggle" />
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
 
-      <label for="navToggle" class="navButton">
-        <span class="navIcon"> &nbsp; </span>
+      <label for="navi-toggle" class="navigation__btn">
+        <span class="navigation__icon"> &nbsp; </span>
       </label>
 
-      <div class="navBackground">&nbsp;</div>
+      <div class="navigation__background">&nbsp;</div>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="../index.html" class="navigation__link">
+              <span>01 </span>Home</a
+            >
+          </li>
 
-      <nav class="headerNav">
-        <ul class="headerNavList">
-          <li class="headerNavItem">
-            <a href="../index.html" class="headerNavLink">Home</a>
+          <li class="navigation__item">
+            <a href="moreInfo.html" class="navigation__link">
+              <span>02 </span>What is Culture Shock?</a
+            >
           </li>
-          <li class="headerNavItem">
-            <a href="moreInfo.html" class="headerNavLink">More Information</a>
-          </li>
-          <li class="headerNavItem">
-            <a href="aboutTeam.html" class="headerNavLink">About Our Team</a>
+
+          <li class="navigation__item">
+            <a href="aboutTeam.html" class="navigation__link">
+              <span>03 </span>
+              About our Team</a
+            >
           </li>
         </ul>
       </nav>
     </div>
 
-    <header class="headerContainer">
-      <h1 class="headerHeading countryName">Country Name</h1>
+    <header class="header__container">
+      <h1 class="header__heading countryName">Country Name</h1>
     </header>
 
-    <main class="mainContainer">
-      <section class="mainGeneralFacts">
-        <h2 class="mainContentHeader">About Country</h2>
+    <main class="main__container">
+      <section class="main__content general__facts">
+        <h2 class="main__content--header general__facts">About Country</h2>
 
-        <p class="mainContent">
+        <p class="main__content--para general__facts">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra
           magna ac placerat vestibulum lectus mauris ultrices. Mauris rhoncus
@@ -127,10 +142,10 @@
         <img
           src="../images/placeholder.jpg"
           alt="Placeholder"
-          class="mainContentImg"
+          class="main__content--img general__facts"
         />
 
-        <p class="mainContent">
+        <p class="main__content--para general__facts">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra
           magna ac placerat vestibulum lectus mauris ultrices. Mauris rhoncus
@@ -198,16 +213,16 @@
         <img
           src="../images/placeholder.jpg"
           alt="Placeholder"
-          class="mainContentImg"
+          class="main__content--img general__facts"
         />
       </section>
 
-      <section class="mainTipsTricks">
-        <h2 class="tipsTricksHeader">Tips & Tricks</h2>
+      <section class="main__content tips-and-tricks">
+        <h2 class="main__content--header tips-and-tricks">Tips & Tricks</h2>
 
-        <div class="tipsTricksStory">
-          <h3 class="tipsTricksContentHeader">Story heading</h3>
-          <p class="tipstricksContent">
+        <div class="main__content--div tips-and-tricks">
+          <h3 class="main__content--header tips-and-tricks">Story heading</h3>
+          <p class="main__content--para tips-and-tricks">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut etiam
             sit amet nisl purus. Porttitor lacus luctus accumsan tortor posuere
@@ -222,9 +237,9 @@
             cursus turpis.
           </p>
         </div>
-        <div class="tipsTricksStory">
-          <h3 class="tipsTricksContentHeader">Story heading</h3>
-          <p class="tipstricksContent">
+        <div class="main__content--div tips-and-tricks">
+          <h3 class="main__content--header tips-and-tricks">Story heading</h3>
+          <p class="main__content--para tips-and-tricks">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut etiam
             sit amet nisl purus. Porttitor lacus luctus accumsan tortor posuere
@@ -239,9 +254,9 @@
             cursus turpis.
           </p>
         </div>
-        <div class="tipsTricksStory">
-          <h3 class="tipsTricksContentHeader">Story heading</h3>
-          <p class="tipstricksContent">
+        <div class="main__content--div tips-and-tricks">
+          <h3 class="main__content--header tips-and-tricks">Story heading</h3>
+          <p class="main__content--para tips-and-tricks">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut etiam
             sit amet nisl purus. Porttitor lacus luctus accumsan tortor posuere
@@ -256,9 +271,9 @@
             cursus turpis.
           </p>
         </div>
-        <div class="tipsTricksStory">
-          <h3 class="tipsTricksContentHeader">Story heading</h3>
-          <p class="tipstricksContent">
+        <div class="main__content--div tips-and-tricks">
+          <h3 class="main__content--header tips-and-tricks">Story heading</h3>
+          <p class="main__content--para tips-and-tricks">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut etiam
             sit amet nisl purus. Porttitor lacus luctus accumsan tortor posuere
@@ -275,38 +290,38 @@
         </div>
       </section>
 
-      <section class="mainFAQ">
-        <h2 class="faqHeader">Commonly Asked Questions</h2>
+      <section class="main__content">
+        <h2 class="main__content--header">Commonly Asked Questions</h2>
 
-        <div class="faqContent">
-          <h3 class="faqContentQuestion">Question</h3>
-          <p class="faqContentAnswer">Answer</p>
+        <div class="main__content--div FAQ">
+          <h3 class="main__content--header FAQ">Question</h3>
+          <p class="main__content--para FAQ">Answer</p>
         </div>
-        <div class="faqContent">
-          <h3 class="faqContentQuestion">Question</h3>
-          <p class="faqContentAnswer">Answer</p>
+        <div class="main__content--div FAQ">
+          <h3 class="main__content--header FAQ">Question</h3>
+          <p class="main__content--para FAQ">Answer</p>
         </div>
-        <div class="faqContent">
-          <h3 class="faqContentQuestion">Question</h3>
-          <p class="faqContentAnswer">Answer</p>
+        <div class="main__content--div FAQ">
+          <h3 class="main__content--header FAQ">Question</h3>
+          <p class="main__content--para FAQ">Answer</p>
         </div>
-        <div class="faqContent">
-          <h3 class="faqContentQuestion">Question</h3>
-          <p class="faqContentAnswer">Answer</p>
+        <div class="main__content--div FAQ">
+          <h3 class="main__content--header FAQ">Question</h3>
+          <p class="main__content--para FAQ">Answer</p>
         </div>
       </section>
     </main>
 
-    <footer class="footerContainer">
-      <ul class="footerNav">
-        <li class="footerNavList">
-          <a href="../index.html" class="footerNavItem">Home</a>
+    <footer class="footer__container">
+      <ul class="footer__nav--list">
+        <li class="footer__nav--item">
+          <a href="../index.html" class="footer__nav--link">Home</a>
         </li>
-        <li class="footerNavList">
-          <a href="moreInfo.html" class="footerNavItem">More Information</a>
+        <li class="footer__nav--item">
+          <a href="moreInfo.html" class="footer__nav--link">More Information</a>
         </li>
-        <li class="footerNavList">
-          <a href="aboutTeam.html" class="footerNavItem">About Our Team</a>
+        <li class="footer__nav--item">
+          <a href="aboutTeam.html" class="footer__nav--link">About Our Team</a>
         </li>
       </ul>
     </footer>
