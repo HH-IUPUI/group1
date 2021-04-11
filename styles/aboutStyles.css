@@ -1,0 +1,35 @@
+*
+  { box-sizing: border-box; }
+
+/* Style the header */
+.header
+{ background-color: lightgrey;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 2%;}
+
+ul
+{ list-style-type: none; }
+
+.topnav
+{ float: right; }
+
+.statements
+{ background-color: lightgrey;
+  text-align: center; }
+
+.b, .a, .c, .d, .statements
+{ background-color: lightgrey;
+  margin: 70px; 
+  padding: 70px; 
+  content: 70px; }
+
+.img1
+{ float: right; }
+
+.img2
+{ float: left; }
+
+.footer
+{ background-color: lightgrey; }
