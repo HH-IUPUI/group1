@@ -9,20 +9,134 @@
     />
 
     <!-- add info here -->
-    <meta name="author" content="" />
-    <meta name="description" content="xxxxxx" />
-    <meta name="keywords" content="xxxxxxx" />
+    <meta name="author" content="Joseph" />
+    <meta name="description" content="Culture Shock occurs when a person moves from a familiar environment to a new cultural context, and may cause anxiety or confusion." />
+    <meta name="keywords" content="culture shock, infographic, tips and tricks, tips & tricks" />
 
     <title>What is Culture Shock?</title>
 
-    <link rel="stylesheet" href="/styles/overallStyles.css" />
-    <link rel="stylesheet" href="/styles/infoStyles.css" />
+    <link rel="stylesheet" href="../styles/overallStyles.css" />
+    <link rel="stylesheet" href="../styles/infoStyles.css" />
+	<script>
+function navSearch() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('navInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("countries");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+function footerSearch() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('footerInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("footerCountrySearch");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
+
+footerInput
+</script>
   </head>
   <body>
-    <header class="headerContainer">header</header>
+	<div class="permaHeader">
+	<div id="invisdiv"></div>
+    <header class="headerContainer"><h1>Culture Shock!</h1></header>
+	<input class="navcheck" id="toggle-menu" type="checkbox" />
+	<label class="navbutton" for="toggle-menu">&mdash;<br>&mdash;<br>&mdash;</label>
+	<nav>
+		<ul id="generalPages">
+			<li><a href="#">Home/Country List</a></li>
+			<li><a href="#">Our Team</a></li>
+			<li><a href="#">About/General Info</a></li>
+		</ul>
+		<input type="text" id="navInput" onkeyup="navSearch()" placeholder="Filter by country name..">
+		<ul id="countries">
+			<li><a href="#">Finland</a></li>
+			<li><a href="#">U.S.A.</a></li>
+			<li><a href="#">South Africa</a></li>
+			<li><a href="#">Chile</a></li>
+			<li><a href="#">South Korea</a></li>
+		</ul>
+	</nav>
+	</div>
+    <main class="mainContainer">
+		<section id="overview">
+		<input class="contentcheck" id="toggle-overview" type="checkbox" />
+		<label class="contentbutton" for="toggle-overview">
+			<div class="sectionHeader"><div class="minmax">+/-</div><h2>What is Culture Shock?</h2></div></label>
+		<div class="sectionContent">
+		<p>Culture shock is an experience a person may have when one moves to a cultural environment which is different from one's own; it is also the personal disorientation a person may feel when experiencing an unfamiliar way of life due to immigration or a visit to a new country, a move between social environments, or simply transition to another type of life. One of the most common causes of culture shock involves individuals in a foreign environment. Culture shock can be described as consisting of at least one of four distinct phases: honeymoon, negotiation (or frustration), adjustment, and adaptation.</p>
+		<p>source: <a href="https://en.wikipedia.org/wiki/Culture_shock" target="_blank" rel="noopener noreferrer">Wikipedia (Culture Shock)</a></p>
+		<p>We've collected personal stories and experiences to help with the second phase of culture shock (frustration) and to help people move to the third phase (adjustment).</p>
+		</div>
+		</section>
+		<section id="infographic">
+		<input class="contentcheck" id="toggle-infographic" type="checkbox" />
+		<label class="contentbutton" for="toggle-infographic">
+			<div class="sectionHeader"><div class="minmax">+/-</div><h2>The Stages of Culture Shock</h2></div></label>
+		<div class="sectionContent">
+		<figure>
+			<img class="infographic" src="../images/CS-infographic.jpg">
+			<figcaption>Culture Shock Infographic</br>source: <a href="https://www.worktheworld.com/infographics/why-culture-shock-is-good-for-you" target="_blank" rel="noopener noreferrer">https://www.worktheworld.com/infographics/why-culture-shock-is-good-for-you</a></figcaption>
+		</figure>
+		</div>
+		</section>
+		<section id="generalTips">
+		<input class="contentcheck" id="toggle-generalTips" type="checkbox" />
+		<label class="contentbutton" for="toggle-generalTips">
+			<div class="sectionHeader"><div class="minmax">+/-</div><h2>General Tips and Tricks</h2></div></label>
+		<div class="sectionContent">
+		<ul>
+			<li>Alleviate homesickness, but do not completely isolate yourself from your new cultural context.</li>
+		</ul>
+		</div>
+		</section>
+	</main>
 
-    <main class="mainContainer"></main>
-
-    <footer class="footerContainer">footer</footer>
+    <footer class="footerContainer">
+		<div id="generalFooter"><div id="copyrightInfo">
+		Useful Info for Kind People that Care.
+		</div>
+		<ul id="generalPages">
+			<li><a href="#">Home/Country List</a></li>
+			<li><a href="#">Our Team</a></li>
+			<li><a href="#">About/General Info</a></li>
+		</ul>
+		</div>
+		<div id="footerCountrySearch">
+		<input type="text" id="footerInput" onkeyup="footerSearch()" placeholder="Filter by country name...">
+		<ul id="footerCountries">
+			<li><a href="#">Finland</a></li>
+			<li><a href="#">U.S.A.</a></li>
+			<li><a href="#">South Africa</a></li>
+			<li><a href="#">Chile</a></li>
+			<li><a href="#">South Korea</a></li>
+		</ul>
+		</div>
+	</footer>
   </body>
 </html>
