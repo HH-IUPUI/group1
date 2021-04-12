@@ -3,17 +3,66 @@
 
 /* Style the header */
 .header
-{ background-color: lightgrey;
+{ background-color: #3cb371;
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 2%;}
+  padding: 30px 0;}
 
 ul
 { list-style-type: none; }
 
 .topnav
-{ float: right; }
+{ float: right;
+  padding: 15px; }
+
+.statements
+{ text-align: center; }
+
+.b, .a, .c, .d, .statements
+{ background-color: lightgrey;
+  margin: 50px; 
+  padding: 70px; 
+  content: 75%; }
+
+.right
+{ text-align: left; }
+
+.left
+{ text-align: right;  }
+
+.img1
+{ float: right;
+  padding-left: 1em;
+  padding-top: 1em; }
+
+.img2
+{ float: left;
+  padding-right: 1em; }
+
+.footer
+{ background-color: lightgrey; 
+  margin: 2%;
+  padding: 10px 0;
+  text-align: center;}
+
+
+/* Responsive layout - makes the two 
+stack on top of each other instead of next to each other*/
+@media screen and (max-width:600px)
+{
+/* Style the header */
+.header
+{ background-color: lightblue;
+  text-align: left;
+  font: 10px bold Arial, sans-serif;
+  margin: 2%;
+  padding: 5%;
+  overflow: auto; }
+
+ul
+{ list-style-type: none; }
+
+.topnav
+{ text-align: right; }
 
 .statements
 { background-color: lightgrey;
@@ -21,15 +70,27 @@ ul
 
 .b, .a, .c, .d, .statements
 { background-color: lightgrey;
-  margin: 70px; 
-  padding: 70px; 
-  content: 70px; }
+  font-family: "Lucida Console", monospace;
+  margin: 2%; 
+  padding: 10px; 
+  content: 75%; }
+
+h3
+{ text-align: center; }
+
+.members
+{ text-align: center;
+  font-family: Arial, sans-serif; }
 
 .img1
-{ float: right; }
+{ display: none; }
 
 .img2
-{ float: left; }
+{ display: none; }
 
 .footer
-{ background-color: lightgrey; }
+{ background-color: lightgrey;
+  margin: 10px;
+  padding: 20px 0; 
+  font-family: Arial, sans-serif; }
+}
