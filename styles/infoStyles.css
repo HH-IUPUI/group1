@@ -73,7 +73,7 @@ body{
 	background-color:#fff;
 	color:#555;
 	display:flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items:center;
 	position:fixed;
 	top:0;
@@ -81,7 +81,10 @@ body{
 	height:75px;
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
-.permaHeader .invisdiv{
+#spacerLeft{
+	display:block;
+}
+#spacerRight{
 	display:none;
 }
 header{
@@ -93,14 +96,33 @@ h1{
 	text-transform: uppercase;
 	letter-spacing:.2em;
 }
-.navcheck{
+#mobileNavCheck{
 	display:none;
 }
-#navButtonWrap{
+#mobileNav{
+	margin-right:-25em;
+	opacity:0;
 	position:fixed;
 	top:0;
 	right:0;
-	z-index:2;
+	overflow:hidden;
+	transition:all .5s;
+	height:100%;
+	min-width:50%;
+	z-index:3;
+}
+#desktopNavCheck{
+	display:none;
+}
+#desktopNav{
+	display:none;
+}
+
+
+#navButtonWrap{
+	position:relative;
+	display:block;
+	z-index:5;
 }
 .navbutton{
 	display:flex;
@@ -112,22 +134,12 @@ h1{
 	cursor: pointer;
 }
 nav{
-	margin-right:-25em;
-	opacity:0;
-	position:fixed;
-	top:0;
-	right:0;
-	overflow:hidden;
-	transition:all .5s;
 	background-color: white;
 	color:#555;
 	font-family: 'Libre Baskerville', serif;
-	height:100%;
-	min-width:50%;
-	z-index:1;
 }
 
-.permaHeader input[type=checkbox]:checked ~ nav{
+.permaHeader #mobileNavCheck[type=checkbox]:checked ~ #mobileNav{
 		display:block;
 		text-align:left;
 		opacity:1;
@@ -271,13 +283,12 @@ footer div, ul {
 		justify-content:space-evenly;
 		align-content:stretch;
 		flex-direction:row;
+		margin:initial;
 	}
 	.permaHeader .invisdiv{
 		display:flex;
 	}
 	header{
-		display:flex;
-		margin:initial;
 	}
 	h1{
 		margin:.5em;
@@ -285,15 +296,21 @@ footer div, ul {
 	#navButtonWrap{
 		display:none;
 	}
-	nav{
+	#mobileNav{
+		display:none;
+	}
+	.permaHeader #mobileNavCheck[type=checkbox]:checked ~ #mobileNav{
+		display:none;
+	}
+	#desktopNav{
 		display:flex;
 		position:relative;
 		opacity:1;
 		margin:initial;
 		min-width:auto;
+		height:100%;
 	}
 	nav ul{
-		justify-content:center;
 		flex-direction:row;
 		padding:0;
 		margin:0;
@@ -301,6 +318,48 @@ footer div, ul {
 	nav li{
 		padding:0;
 		margin:0;
+	}
+	nav a{
+		padding:auto 2em auto 2em;
+	}
+	#headerCountrySearch{
+		display:flex;
+		justify-content:center;
+		flex-direction:column;
+		visibility:hidden;
+		width:0;
+		max-width:1000px;
+		position:fixed;
+		top:75px;
+		right:0;
+		background-color:white;
+		box-shadow: 0px 10px 5px rgba(0, 0, 0, .2);
+		transition-delay:.5s;
+	}
+	#countriesDropdown:hover #headerCountrySearch{
+		top:75px;
+		visibility:visible;
+		width:100%;
+		transition-delay:initial;
+	}
+	#headerInput{
+		border-radius:15px;
+		margin:2em auto 2em auto;
+		padding: 5px 10px 5px 10px;
+		width:300px;
+	}
+	#headerCountries{
+		display:flex;
+		justify-content:space-evenly;
+		align-content:center;
+		flex-flow:row wrap;
+	}
+	#headerCountries li{
+		display:inline-block;
+		white-space:nowrap;
+		width:initial;
+	}
+	#headerCountries a{
 	}
 	main section{
 		width:100%;
