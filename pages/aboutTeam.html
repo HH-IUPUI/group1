@@ -8,30 +8,43 @@
 	<meta name="description" content="about culture shock project and team">
 	<meta name="keywords" content="culture shock team, about us, team members">
 
-    <title>About our Project and Team</title>
+    <title>Culture Shock</title>
 
-    <link rel="stylesheet" href="/styles/overallStyles.css" />
-    <link rel="stylesheet" href="styles/aboutStyles.css" />
+    <link rel="stylesheet" href="../styles/overallStyles.css" />
+    <link rel="stylesheet" href="../styles/aboutStyles.css" />
   </head>
   
   <body>
 <!--header starts here-->
     <div class="header">
-	<h1 class="center">About our Project and Team</h1>
+<input id="mobileNavCheck" type="checkbox" aria-label="Navigation Toggle" />
+
+	<h1 class="center">Culture Shock</h1>
 	
 <!--navigation-->
 <ul class="topnav">
-<li><a href="@">Home</a></li>
-<li><a href="@">General</a></li>
-<li><a href="@">Countries</a></li>
+<li><a href="#">Home</a></li>
+<li><a href="#">General</a></li>
+<li><a href="#">Countries</a></li>
 </ul>
+
+<div id="navButtonWrap">
+<label class="navbutton" for="mobileNavCheck">
+				<svg viewBox="0 0 100 80" width="30" height="30" aria-label="Mobile Navigation Toggle">
+				<rect width="100" height="10" fill="#555"></rect>
+				<rect y="30" width="100" height="10" fill="#555"></rect>
+				<rect y="60" width="100" height="10" fill="#555"></rect>
+				</svg>
+			</label>
+	</div>
 </div>
 <!--Changeable Content-->
 	
 
-    <main class="mainContainer">
+    <main class="main">
 
 <div class="statements">
+  <div class="mission">
 	<h2 class="h2">Mission</h2>
 		<p>Lorem Ipsum on yksinkertaisesti testausteksti, jota tulostus- ja
         ladontateollisuudet käyttävät. Lorem Ipsum on ollut teollisuuden
@@ -43,7 +56,9 @@
         Ipsum pätkiä, julkaistiin ja vielä myöhemmin tietokoneen
         julkistusohjelmissa, kuten Aldus PageMaker joissa oli versioita Lorem
         Ipsumista.</p>
+	</div>
 
+  <div class="vision">
 	<h2 class="h2">Vision</h2>
 		<p>Lorem Ipsum on yksinkertaisesti testausteksti, jota tulostus- ja
         ladontateollisuudet käyttävät. Lorem Ipsum on ollut teollisuuden
@@ -55,12 +70,13 @@
         Ipsum pätkiä, julkaistiin ja vielä myöhemmin tietokoneen
         julkistusohjelmissa, kuten Aldus PageMaker joissa oli versioita Lorem
         Ipsumista.</p>
+	</div>
 </div>
 	
 <div class="members">
 	<h2 class="team">Team Members</h2>
 	<div class="a">
-<?-- Image to right of text-->
+<!-- Image to right of text-->
 		<img src="images/cat1.jpg" alt="Amaru" class="img1">
 		<h3 class="left">Amaru</h3>
 		<p class="left">Lorem Ipsum on yksinkertaisesti testausteksti, jota tulostus- ja
@@ -75,7 +91,7 @@
         Ipsumista.</p>
 	</div>
 	<div class="b">
-<?-- Image to left of text-->
+<!-- Image to left of text-->
 		<img src="images/cat1.jpg" alt="Joseph" class="img2">
 		<h3 class="right">Joseph</h3>
 		<p class="right">Lorem Ipsum on yksinkertaisesti testausteksti, jota tulostus- ja
@@ -90,7 +106,7 @@
         Ipsumista.</p>
 	</div>
 	<div class="c">
-<?-- Image to right of text-->
+<!-- Image to right of text-->
 		<img src="images/maeve.jpg" alt="Maeve" class="img1">
 		<h3 class="left">Maeve</h3>
 		<p class="left">Lorem Ipsum on yksinkertaisesti testausteksti, jota tulostus- ja
@@ -105,7 +121,7 @@
         Ipsumista.</p>
 	</div>
 	<div class="d">
-<?-- Image to left of text-->
+<!-- Image to left of text-->
 		<img src="images/cat1.jpg" alt="Shannon" class="img2">
 		<h3 class="right">Shannon</h3>
 		<p class="right">Lorem Ipsum on yksinkertaisesti testausteksti, jota tulostus- ja
@@ -118,8 +134,6 @@
         Ipsum pätkiä, julkaistiin ja vielä myöhemmin tietokoneen
         julkistusohjelmissa, kuten Aldus PageMaker joissa oli versioita Lorem
         Ipsumista.</p>
-		<img src="images/shannon.jpg" alt="Shannon" class="img2">
-		<p>About Shannon</p>
 	</div>
 </div>
 	
