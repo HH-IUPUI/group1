@@ -9,10 +9,11 @@ nav{
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.055);
 }
 
 .logo {
+    font-family: 'Roboto', sans-serif;
     color: rgb(0, 0, 0);
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -30,10 +31,13 @@ nav{
 }
 
 .nav-links a{
-    color: rgb(0, 0, 0);
+    color: rgba(0, 0, 0, 0.685);
     text-decoration: none;
     letter-spacing: 1px;
     font-weight: lighter;
+}
+.nav-links a:hover{
+    color: rgba(0, 0, 0);
 }
 .hamburger{
     display: none;
@@ -93,79 +97,139 @@ nav{
     
 }
 /*Here starts the style of the big card in the landing page*/
-
-.card-container::-webkit-scrollbar{
-    visibility: hidden;
-}
-.card-container{
-    height: 45vh ;
-    background-color: rgb(255, 255, 255);
-    z-index: 1; 
-    padding: 2%;
-    display: flex;
-    justify-content: left;
-    overflow-x: auto;
-    padding: 2%;    
-    
-}
-
 .card-container__card{
-    display: flex;
-    justify-content: space-around;
-    min-width: 100vh;
-    min-height: 17vw;
-    position: relative; 
-    top: 0.5%;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 20px 20px rgb(0, 0, 0, 0.1);
-    border-radius: 30px;
-    transition: 0.5s;
-    margin: 10px 20px;
-    
+    display: flex; 
+    justify-content: space-evenly;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80vw;
 
+    
 }
 
 .card-container__card__image{
-    max-height:39vh ;
-    width: 75%;
-    border-radius: 30px 0 0 30px; 
-    
+  width: 60%;
+  border-radius: 20px 0  0 20px  ;
+
 }
-.card-container__card__info{
-    
-    justify-items: center;
-    align-content: center;
+.card-container__car__info{
+    font-family: 'Roboto', sans-serif;
+
+    background-color:rgba(0, 0, 0, 0.075);
+    border-radius: 0 20px 20px 0 ;
+    padding: 1%;
+   
 }
 .card-container__card__info__title {
-    font-size: 1.5rem;
-    position: relative;
-    top: 4%;  
-    left: 5%;  
-    
+   font-size: 1.5rem;
+   font-weight:lighter;
+   margin: 5%;
+   
+
 }
 .card-container__card__info__description {
-    font-size: 1rem;
-    position: relative;
-    font-weight: lighter;
-    top: 15%;
-    left: 10%;
-    max-width: 75% ;
-    max-height: 65%;
-    text-overflow: initial;
-    text-justify: inter-word;
-}
-
-
-.card-container__card__info__read-more{
-    position: relative;
-    top:27%;
-    left: 25%;
+   font-size: 1rem;
+   margin:5%;
+   font-weight: lighter;
 }
 
 .card-container__card__info__read-more__button{
-    border: none;
-    background-color:rgba(0, 0, 0, 0.19);
-    padding: 3%;
-    border-radius: 30px;
-    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    justify-content: flex-end;
+    position: relative;
+    left: 20%;
+    border-style: none;
+    outline: none;
+    padding: 2%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
 }
+.card-container__card__info__read-more__button:hover{
+    background-color: rgba(0, 0, 0, 0.116);
+}
+
+/* styles for the searching bar and its icon*/
+
+.search-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3%;
+}
+
+.search-box__icon{
+    width: 7%;
+    height: 6vh;
+    background-color:rgba(0, 0, 0, 0.07);
+    border-radius: 25px 0 0 25px;
+    padding: 1%;
+}
+
+.search-box__bar{
+    width: 70vw;
+    height: 6vh;
+    border-radius: 0 25px 25px 0;
+    background-color: rgba(0, 0, 0, 0.07);
+    border-style: none;
+    outline: none;
+}
+
+/* style for the search area for small cards*/
+
+.search-card-area{
+    background-color: rgba(0, 0, 0, 0.03);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2%;
+    margin: 5%;
+    padding: 3%;
+    width: 87vw;
+    border-radius: 20px;
+    
+}
+.search-card-area__small-card{
+    border-radius: 20px;
+    margin: 1%;
+    box-sizing: border-box;
+    box-shadow: 20px;
+
+    }
+
+.search-card-area__small-card__img{
+    border-radius: 20px 20px 0 0;
+    width: 24vw;
+}
+.search-card-area__small-card__info{
+    font-family: 'Roboto', sans-serif;
+    height: 6vh;
+    background-color: rgba(0, 0, 0, 0.082);
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    font-weight: lighter;
+    padding-top:10px ;
+}
+
+/* This is the part related to the styling of the footer */
+.footer-container__footer{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.082);
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+    max-height: 18vh;
+    gap: 20px;
+}
+
+ a{
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    text-transform: none;
+    text-decoration: none; 
+}
+
+
+
