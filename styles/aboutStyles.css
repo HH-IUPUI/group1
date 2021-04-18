@@ -1,27 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');
+
 *
   { box-sizing: border-box; }
+  
 
 /* Style the header */
 .header
 { background-color: #3cb371;
   text-align: center;
-  padding: 30px 0;}
+  padding: 30px 5%; 
+  border-radius: 20px; 
+  box-shadow:  0px 6px 8px 0px rgba(0, 0, 0, 0.10);
+}
+  
+#mobileNavCheck
+{ display: none; }
+
+#navButtonWrap
+{ display: none; }
 
 ul
 { list-style-type: none; }
 
 .topnav
-{ float: right;
-  padding: 15px; }
+{ display: flex; 
+  background-color: lightgrey;
+  margin: 0; 
+  padding: 1em;  
+  justify-content: center; 
+  border-radius: 15px; }
+
+.topnav a
+{ flex-direction: row;
+  font-size: 19px;
+  padding: 30px; }
 
 .statements
-{ text-align: center; }
+{ text-align: center; 
+  border-radius: 15px 50px 30px 5px;
+  display: flex; }
+  
+.members
+{ display: flex; 
+  flex-wrap: wrap; }
 
-.b, .a, .c, .d, .statements
+.members h2
+{ text-align: center;
+  width: 100%; }
+
+
+.b, .a, .c, .d, .mission, .vision
 { background-color: lightgrey;
   margin: 50px; 
   padding: 70px; 
-  content: 75%; }
+  content: 75%; 
+  width: 40%;
+  box-sizing: border-box; 
+  border-radius: 15px 50px 15px 50px;}
 
 .right
 { text-align: left; }
@@ -42,9 +77,19 @@ ul
 { background-color: lightgrey; 
   margin: 2%;
   padding: 10px 0;
-  text-align: center;}
+  text-align: center;
+  border-radius: 20px; }
 
+/* Responsive layout - makes */
+@media screen and (max-width:992px)
+{
+.statements, .members
+{ display: block; 
+  flex-wrap: nowrap; }
 
+.a, .b, .c, .d, .mission, .vision
+{ width: auto; }
+}
 /* Responsive layout - makes the two 
 stack on top of each other instead of next to each other*/
 @media screen and (max-width:600px)
@@ -52,17 +97,43 @@ stack on top of each other instead of next to each other*/
 /* Style the header */
 .header
 { background-color: lightblue;
-  text-align: left;
+  text-align: right;
   font: 10px bold Arial, sans-serif;
-  margin: 2%;
-  padding: 5%;
-  overflow: auto; }
+  /*padding: 5%;*/
+  box-sizing: border-box;
+  overflow: auto; 
+  position: fixed; 
+  top: 0; 
+  height: 20%; 
+  width: 100%; 
+  display: flex; 
+  justify-content: space-between; }
 
 ul
 { list-style-type: none; }
 
+#navButtonWrap
+{ display: block; }
+
+
+
 .topnav
-{ text-align: right; }
+{ text-align: right;
+  position: fixed;
+  display: none; 
+  background-color: cadetblue;
+  width: 50%; 
+  top: 20%;
+  right: 0; 
+  margin: 0; }
+  
+  .header #mobileNavCheck[type=checkbox]:checked ~ .topnav{
+     display: block;
+	}
+
+
+.main
+{ margin-top: 30%; }
 
 .statements
 { background-color: lightgrey;
