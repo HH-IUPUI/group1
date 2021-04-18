@@ -32,9 +32,9 @@
     <link rel="stylesheet" href="/styles/countryStyles.css" />
     <link rel="stylesheet" href="/styles/overallStyles.css" />
   </head>
-  <body>
+  <body id="body">
     <!-- This navigation button and animation was taken from a website course I did previously - Advanced CSS and SCSS -->
-    <div class="navigation">
+    <div class="navigation" id="navigation">
       <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
 
       <label for="navi-toggle" class="navigation__btn">
@@ -42,8 +42,8 @@
       </label>
 
       <div class="navigation__background">&nbsp;</div>
-      <nav class="navigation__nav">
-        <ul class="navigation__list">
+      <nav class="navigation__nav" id="navigation_nav">
+        <ul class="navigation__list" id="navigation_list">
           <li class="navigation__item">
             <a href="../index.html" class="navigation__link">
               <span>01 </span>Home</a
@@ -325,5 +325,6 @@
         </li>
       </ul>
     </footer>
+    <script src="../scripts/app.js"></script>
   </body>
 </html>
