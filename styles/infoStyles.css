@@ -64,6 +64,11 @@ table {
 
 
 /* ------------------------- styles -------------------------*/
+.hideJS {
+	display:block;
+	background-color:pink;
+}
+
 body{
 	background-color:#fff;
     font-family: 'Open Sans', sans-serif;
