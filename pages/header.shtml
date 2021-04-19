@@ -1,0 +1,49 @@
+	<div class="permaHeader">
+		<div id="spacerLeft"></div>
+		<header class="headerContainer"><h1>Culture Shock</h1></header>
+		<input id="mobileNavCheck" type="checkbox" aria-label="Navigation Toggle" />
+		<nav id="mobileNav" aria-label="Mobile Navigation">
+			<ul>
+				<li><a href="country.html">Countries</a></li>
+				<li><a href="#">Team</a></li>
+				<li><a href="#">Info</a></li>
+			</ul>
+		</nav>
+		<div id="navButtonWrap">
+			<label class="navbutton" for="mobileNavCheck">
+				<svg viewBox="0 0 100 80" width="30" height="30" aria-label="Mobile Navigation Toggle">
+				<rect width="100" height="10" fill="#555"></rect>
+				<rect y="30" width="100" height="10" fill="#555"></rect>
+				<rect y="60" width="100" height="10" fill="#555"></rect>
+				</svg>
+				<div id="closeMenuArea" aria-label="Mobile Navigation Toggle"></div>
+			</label>
+		</div>
+		<!-- <input id="desktopNavCheck" type="checkbox" /> -->
+		<nav id="desktopNav" aria-label="Desktop Navigation">
+			<ul>
+				<li id="countriesDropdown">
+					<a href="#">Countries</a>
+<!-- ***** start drop-down menu ***** -->
+					<div id="headerCountrySearch">
+						<input type="text" id="headerInput" onkeyup="headerSearch()" placeholder="Filter by country name..." aria-label="Header Country Filter">
+						<ul id="headerCountries">
+							<li><a href="#">Finland</a></li>
+							<li><a href="#">U.S.A.</a></li>
+							<li><a href="#">South Africa</a></li>
+							<li><a href="#">Chile</a></li>
+							<li><a href="#">South Korea</a></li>
+							<li><a href="#">Argentina</a></li>
+							<li><a href="#">Nepal</a></li>
+							<li><a href="#">Germany</a></li>
+							<li><a href="#">Netherlands</a></li> 
+						</ul>
+					</div>
+<!-- ***** end drop-down menu ***** -->
+				</li>
+				<li><a href="#">Team</a></li>
+				<li><a href="#">Info</a></li>
+			</ul>
+		</nav>
+		<div id="spacerRight"></div>
+	</div>
