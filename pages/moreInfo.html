@@ -79,6 +79,7 @@ function footerSearch() {
 				<rect y="30" width="100" height="10" fill="#555"></rect>
 				<rect y="60" width="100" height="10" fill="#555"></rect>
 				</svg>
+				<div id="closeMenuArea" aria-label="Mobile Navigation Toggle"></div>
 			</label>
 		</div>
 		<!-- <input id="desktopNavCheck" type="checkbox" /> -->
@@ -115,9 +116,9 @@ function footerSearch() {
 			<input class="contentcheck" id="toggle-overview" type="checkbox" aria-label="Section Visibility Toggle"/>
 			<label class="contentbutton" for="toggle-overview">
 				<div class="sectionHeader">
-					<div class="minmax" role="button">+/-</div>
-					<h2>What is Culture Shock?</h2>
 					<div class="invisdiv"></div>
+					<h2>What is Culture Shock?</h2>
+					<div class="minmax" role="button"></div>
 				</div>
 			</label>
 			<div class="sectionContent">
@@ -129,10 +130,16 @@ function footerSearch() {
 			<section id="generalTips">
 			<input class="contentcheck" id="toggle-generalTips" type="checkbox" aria-label="Section Visibility Toggle" />
 			<label class="contentbutton" for="toggle-generalTips">
-				<div class="sectionHeader"><div class="minmax" role="button">+/-</div><h2>General Tips and Tricks</h2><div class="invisdiv"></div></div></label>
+				<div class="sectionHeader">
+					<div class="invisdiv"></div>
+					<h2>General Tips and Tricks</h2>
+					<div class="minmax" role="button"></div>
+					</div>
+				</label>
 			<div class="sectionContent">
 			<ul>
 				<li>Alleviate homesickness, but do not completely isolate yourself from your new cultural context.</li>
+				<li>Use other expatriates as a support group; they will often have insights and social connections that can help you form new friendships and bridge potential issues.</li>
 			</ul>
 			</div>
 			</section>
@@ -141,7 +148,8 @@ function footerSearch() {
 			<section id="infographic">
 			<input class="contentcheck" id="toggle-infographic" type="checkbox" aria-label="Section Visibility Toggle" />
 			<label class="contentbutton" for="toggle-infographic">
-				<div class="sectionHeader"><div class="minmax" role="button">+/-</div><h2>The Stages of Culture Shock</h2><div class="invisdiv"></div></div></label>
+				<div class="invisdiv"></div>
+				<div class="sectionHeader"><h2>The Stages of Culture Shock</h2><div class="minmax" role="button"></div></div></label>
 			<div class="sectionContent">
 			<figure>
 				<img class="infographic" src="../images/CS-infographic.jpg" alt="Infographic of the Stages of Culture Shock">
