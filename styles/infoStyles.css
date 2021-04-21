@@ -64,23 +64,43 @@ table {
 
 
 /* ------------------------- styles -------------------------*/
+
+/* .hideJS and .showJS are used to reveal javascript elements; pages require javascript to display any element that has javascript functionality.
+This is not a tautology, though it seems like one: the .hideJS class sets "display" to "none" anything until the "JS display toggle" script is run to add the .showJS class. If javascript is disabled the entire element will disappear from the page, rather than having functionality disabled) */
+
+.hideJS {
+	display:none;
+}
+.showJS {
+	display:block;
+}
+
 body{
 	background-color:#fff;
     font-family: 'Open Sans', sans-serif;
-	margin-top:100px;
+	margin-top:75px;
 }
-.permaHeader{
+
+#headerWrapper{
 	background-color:#fff;
 	color:#555;
 	display:flex;
 	justify-content: space-between;
 	align-items:center;
+	z-index:5;
+}
+#headerWrapper, #headerShadow{
 	position:fixed;
 	top:0;
 	width:100%;
 	height:75px;
-	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
+#headerShadow{
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+	height:75px;
+	z-index:1;
+}
+
 #spacerLeft{
 	display:block;
 }
@@ -88,13 +108,25 @@ body{
 	display:none;
 }
 header{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-evenly;
+	align-content:center;
+	max-width:100%;
 }
-h1{
+#logo{
+	width:30px;
+	height:30px;
+	fill: skyblue;
+	margin: auto .5em;
+}
+
+#siteName{
     font-family: 'Libre Baskerville', serif;
-	font-size: 170%;
-	margin: auto;
+	font-size: 150%;
 	text-transform: uppercase;
 	letter-spacing:.2em;
+	margin:auto;
 }
 nav{
 	background-color: white;
@@ -148,7 +180,7 @@ nav{
 	background-color:rgba(85, 85, 85, 0.5);
 	transition:width .5s, background-color .5s;
 }
-.permaHeader #mobileNavCheck[type=checkbox]:checked ~ #mobileNav{
+#headerWrapper #mobileNavCheck[type=checkbox]:checked ~ #mobileNav{
 	display:block;
 	text-align:left;
 	opacity:1;
@@ -157,7 +189,7 @@ nav{
 	top:75px;
 	transition:all .5s;
 }
-.permaHeader #mobileNavCheck[type=checkbox]:checked ~ #navButtonWrap #closeMenuArea{
+#headerWrapper #mobileNavCheck[type=checkbox]:checked ~ #navButtonWrap #closeMenuArea{
 	width:100%;
 }
 nav ul{
@@ -185,17 +217,56 @@ nav a:hover{
 	background-color:#eee;
 	transition:background-color .5s ease-out;
 }
+
 main{
+	display:flex;
+	flex-direction:column;
+	align-content: center;
+	justify-content:flex-end;
+	padding:0 1em 0 1em;
+}
+
+main section{
+	border-radius:2em;
+	background-color:white;
+	box-shadow:5px 5px 20px rgba(0, 0, 0, 0.2);
+	padding:1em;
+}
+
+#pageTitle{
+	display:inline-block;
+	min-width:0%;
+	margin:0 auto;
+	position:relative;
+	border-radius:0 0 2em 2em;
+	background-color:AliceBlue;
+	box-shadow:5px 5px 20px rgba(0, 0, 0, 0.2);
+	padding:1.5em 1.5em 1em 1.5em;
+}
+
+#pageTitle h1{
+	font-family: 'Libre Baskerville', serif;
+	font-size:140%;
+	font-weight:bold;
+	color:#555;
+}
+
+#pageContent{
 	display:flex;
 	flex-direction:column;
 	justify-content:center;
 	align-content:center;
 }
 
+#pageContent section{
+	margin-top:1em;
+}
+
 h2{
-	margin-left:.5em;
-	margin:auto;
 	font-family: 'Libre Baskerville', serif;
+	margin:auto;
+	font-size:100%;
+	
 }
 .minmax{
 	display:flex;
@@ -223,7 +294,7 @@ h2{
 .sectionHeader{
 	font-family: 'Open Sans', sans-serif;
 	font-weight:bold;
-	font-size:150%;
+	font-size:120%;
 	text-align:left;
 	padding:.5em;
 	color:#444;
@@ -251,13 +322,7 @@ section input[type=checkbox]:checked ~ .sectionContent{
 section input[type=checkbox]:checked ~ .contentbutton .sectionHeader .minmax::after{
 	content:"+";
 }
-main section{
-	border-radius:2em;
-	background-color:white;
-	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-	margin: 1em;
-	padding:1em;
-}
+
 main p{
 	padding:1em;
 	line-height:1.2;
@@ -314,20 +379,22 @@ footer div, ul {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 	body{
-		margin-top:100px;
+		/*margin-top:100px;*/
 	}
-	.permaHeader{
+	#headerWrapper{
 		justify-content:space-evenly;
 		align-content:stretch;
 		flex-direction:row;
 		margin:initial;
 	}
-	.permaHeader .invisdiv{
+	#headerWrapper .invisdiv{
 		display:flex;
 	}
 	header{
+		max-width:50%;
+		width:100%;
 	}
-	h1{
+	#siteName{
 		margin:.5em;
 	}
 	#navButtonWrap{
@@ -339,7 +406,7 @@ footer div, ul {
 	#closeMenuArea{
 		display:none;
 	}
-	.permaHeader #mobileNavCheck[type=checkbox]:checked ~ #mobileNav{
+	#headerWrapper #mobileNavCheck[type=checkbox]:checked ~ #mobileNav{
 		display:none;
 	}
 	#desktopNav{
@@ -373,6 +440,7 @@ footer div, ul {
 		position:fixed;
 		top:75px;
 		right:0;
+		padding:0 2em 1em 2em;
 		background-color:white;
 		box-shadow: 0px 10px 5px rgba(0, 0, 0, .2);
 		transition-delay:.5s;
@@ -402,11 +470,17 @@ footer div, ul {
 	}
 	#headerCountries a{
 	}
-	main section{
-		width:100%;
+	#pageTitle{
+		display:flex;
+		justify-content:center;
 		max-width:768px;
-		margin-left:auto;
-		margin-right:auto;
+		width:100%;
+	}
+	#pageContent{
+		margin:auto;
+	}
+	main section{
+		max-width:768px;
 	}
 	footer{
 		display:flex;
@@ -426,8 +500,11 @@ footer div, ul {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-	main{
+	#pageContent{
 		flex-direction:row;
+	}
+	header{
+		width:600px;
 	}
 	main section{
 		width:auto;
