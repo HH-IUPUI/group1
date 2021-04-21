@@ -10,61 +10,36 @@
 
     <!-- add info here -->
     <meta name="author" content="Joseph" />
-    <meta name="description" content="Culture Shock occurs when a person moves from a familiar environment to a new cultural context, and may cause anxiety or confusion." />
-    <meta name="keywords" content="culture shock, infographic, tips and tricks, tips & tricks" />
+    <meta name="description" content="Culture Guide aims to help smooth the transition into a new culture and alleviate the pain of culture shock. Culture Shock occurs when a person moves from a familiar environment to a new cultural context, and may cause anxiety or confusion." />
+    <meta name="keywords" content="guide, culture guide, culture shock, infographic, tips and tricks, tips & tricks" />
 
-    <title>What is Culture Shock?</title>
+    <title>General Guidance</title>
 
     <link rel="stylesheet" href="../styles/overallStyles.css" />
     <link rel="stylesheet" href="../styles/infoStyles.css" />
 
+	<!-- jquery library -->
 	<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-
-<script>
-//HTML Include Function
-$(document).ready(function() {
-    $('#headerFilter').load('filter.html');
-});
-
-//$("p").css("background-color", "yellow");
-
-
-//Filter Function
-function itemFilter(inputLocation, listULID) {
-  // Declare variables
-  var input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById(inputLocation);
-  filter = input.value.toUpperCase();
-  ul = document.getElementById(listULID);
-  li = ul.getElementsByTagName('li');
-
-  // Loop through all list items, and hide those who don't match the search query
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
-    txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
-  }
-}
-
-</script>
+	<!-- our scripts -->
+	<script src="../scripts/universal.js"></script>
 
 </head>
 
 <body>
-	<div class="permaHeader">
+	<div id="headerWrapper">
 		<div id="spacerLeft"></div>
-		<header class="headerContainer"><h1>Culture Shock</h1></header>
+		<header class="headerContainer">
+			<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" id="logo">
+			<circle cx="50" cy="50" r="50"/>
+			</svg>
+			<div id="siteName">Culture Guide</div>
+		</header>
 		<input id="mobileNavCheck" type="checkbox" aria-label="Navigation Toggle" />
 		<nav id="mobileNav" aria-label="Mobile Navigation">
 			<ul>
 				<li><a href="country.html">Countries</a></li>
-				<li><a href="#">Team</a></li>
-				<li><a href="#">Info</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">General Guidance</a></li>
 			</ul>
 		</nav>
 		<div id="navButtonWrap"> 
@@ -84,7 +59,7 @@ function itemFilter(inputLocation, listULID) {
 					<a href="#">Countries</a>
 <!-- ***** start drop-down menu ***** -->
 					<div id="headerCountrySearch">
-						<div id="headerFilter"></div>
+						<input type="text" id="headerInput" onkeyup="itemFilter('headerInput', 'headerCountries')" placeholder="Filter by country name..." aria-label="Header Country Filter" class="hideJS">
 						<ul id="headerCountries">
 							<li><a href="#">Finland</a></li>
 							<li><a href="#">U.S.A.</a></li>
@@ -105,7 +80,10 @@ function itemFilter(inputLocation, listULID) {
 		</nav>
 		<div id="spacerRight"></div>
 	</div>
+	<div id="headerShadow"></div>
     <main class="mainContainer">
+		<div id="pageTitle"><h1>General Guidance</h1></div>
+		<div id="pageContent">
 		<div id="textColumn">
 			<section id="overview">
 			<input class="contentcheck" id="toggle-overview" type="checkbox" aria-label="Section Visibility Toggle"/>
@@ -153,6 +131,7 @@ function itemFilter(inputLocation, listULID) {
 			</div>
 			</section>
 		</div>
+		</div>
 	</main>
 
     <footer class="footerContainer">
@@ -166,7 +145,7 @@ function itemFilter(inputLocation, listULID) {
 		</ul>
 		</div>
 		<div id="footerCountrySearch">
-		<input type="text" id="footerInput" onkeyup="itemFilter('footerInput','footerCountries')" placeholder="Filter by country name..." aria-label="Country Search Filter">
+		<input type="text" id="footerInput" onkeyup="itemFilter('footerInput','footerCountries')" placeholder="Filter by country name..." aria-label="Country Search Filter" class="hideJS">
 		<ul id="footerCountries">
 			<li><a href="#">Finland</a></li>
 			<li><a href="#">U.S.A.</a></li>
