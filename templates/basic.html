@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=3"
+    />
+
+    <!-- add info here -->
+    <meta name="author" content="Joseph" />
+    <meta name="description" content="Culture Shock occurs when a person moves from a familiar environment to a new cultural context, and may cause anxiety or confusion." />
+    <meta name="keywords" content="culture shock, infographic, tips and tricks, tips & tricks" />
+
+    <title>What is Culture Shock?</title>
+
+    <link rel="stylesheet" href="../styles/overallStyles.css" />
+    <link rel="stylesheet" href="../styles/infoStyles.css" />
+	<script>
+function headerSearch() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('headerInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("headerCountrySearch");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
+function footerSearch() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('footerInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("footerCountrySearch");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
+</script>
+  </head>
+  <body>
+	<div class="permaHeader">
+		<div id="spacerLeft"></div>
+		<header class="headerContainer"><h1>Culture Shock</h1></header>
+		<input id="mobileNavCheck" type="checkbox" aria-label="Navigation Toggle" />
+		<nav id="mobileNav" aria-label="Mobile Navigation">
+			<ul>
+				<li><a href="#">Countries</a></li>
+				<li><a href="#">Team</a></li>
+				<li><a href="#">Info</a></li>
+			</ul>
+		</nav>
+		<div id="navButtonWrap">
+			<label class="navbutton" for="mobileNavCheck">
+				<svg viewBox="0 0 100 80" width="30" height="30" aria-label="Mobile Navigation Toggle">
+				<rect width="100" height="10" fill="#555"></rect>
+				<rect y="30" width="100" height="10" fill="#555"></rect>
+				<rect y="60" width="100" height="10" fill="#555"></rect>
+				</svg>
+				<div id="closeMenuArea" aria-label="Mobile Navigation Toggle"></div>
+			</label>
+		</div>
+		<!-- <input id="desktopNavCheck" type="checkbox" /> -->
+		<nav id="desktopNav" aria-label="Desktop Navigation">
+			<ul>
+				<li id="countriesDropdown">
+					<a href="#">Countries</a>
+<!-- ***** start drop-down menu ***** -->
+					<div id="headerCountrySearch">
+						<input type="text" id="headerInput" onkeyup="headerSearch()" placeholder="Filter by country name..." aria-label="Header Country Filter">
+						<ul id="headerCountries">
+							<li><a href="#">Finland</a></li>
+							<li><a href="#">U.S.A.</a></li>
+							<li><a href="#">South Africa</a></li>
+							<li><a href="#">Chile</a></li>
+							<li><a href="#">South Korea</a></li>
+							<li><a href="#">Argentina</a></li>
+							<li><a href="#">Nepal</a></li>
+							<li><a href="#">Germany</a></li>
+							<li><a href="#">Netherlands</a></li> 
+						</ul>
+					</div>
+<!-- ***** end drop-down menu ***** -->
+				</li>
+				<li><a href="#">Team</a></li>
+				<li><a href="#">Info</a></li>
+			</ul>
+		</nav>
+		<div id="spacerRight"></div>
+	</div>
+    <main class="mainContainer">
+		<div id="textColumn">
+			<section id="overview">
+			<input class="contentcheck" id="toggle-overview" type="checkbox" aria-label="Section Visibility Toggle"/>
+			<label class="contentbutton" for="toggle-overview">
+				<div class="sectionHeader">
+					<div class="invisdiv"></div>
+					<h2>What is Culture Shock?</h2>
+					<div class="minmax" role="button"></div>
+				</div>
+			</label>
+			<div class="sectionContent">
+			<p>Culture shock is an experience a person may have when one moves to a cultural environment which is different from one's own; it is also the personal disorientation a person may feel when experiencing an unfamiliar way of life due to immigration or a visit to a new country, a move between social environments, or simply transition to another type of life. One of the most common causes of culture shock involves individuals in a foreign environment. Culture shock can be described as consisting of at least one of four distinct phases: honeymoon, negotiation (or frustration), adjustment, and adaptation.</p>
+			<p>source: <a href="https://en.wikipedia.org/wiki/Culture_shock" target="_blank" rel="noopener noreferrer">Wikipedia (Culture Shock)</a></p>
+			<p>We've collected personal stories and experiences to help with the second phase of culture shock (frustration) and to help people move to the third phase (adjustment).</p>
+			</div>
+			</section>
+			<section id="generalTips">
+			<input class="contentcheck" id="toggle-generalTips" type="checkbox" aria-label="Section Visibility Toggle" />
+			<label class="contentbutton" for="toggle-generalTips">
+				<div class="sectionHeader">
+					<div class="invisdiv"></div>
+					<h2>General Tips and Tricks</h2>
+					<div class="minmax" role="button"></div>
+					</div>
+				</label>
+			<div class="sectionContent">
+			<ul>
+				<li>Alleviate homesickness, but do not completely isolate yourself from your new cultural context.</li>
+				<li>Use other expatriates as a support group; they will often have insights and social connections that can help you form new friendships and bridge potential issues.</li>
+			</ul>
+			</div>
+			</section>
+		</div>
+		<div id="imageColumn">
+			<section id="infographic">
+			<input class="contentcheck" id="toggle-infographic" type="checkbox" aria-label="Section Visibility Toggle" />
+			<label class="contentbutton" for="toggle-infographic">
+				<div class="invisdiv"></div>
+				<div class="sectionHeader"><h2>The Stages of Culture Shock</h2><div class="minmax" role="button"></div></div></label>
+			<div class="sectionContent">
+			<figure>
+				<img class="infographic" src="../images/CS-infographic.jpg" alt="Infographic of the Stages of Culture Shock">
+				<figcaption>Culture Shock Infographic<br>source: <a href="https://www.worktheworld.com/infographics/why-culture-shock-is-good-for-you" target="_blank" rel="noopener noreferrer">https://www.worktheworld.com/infographics/why-culture-shock-is-good-for-you</a></figcaption>
+			</figure>
+			</div>
+			</section>
+		</div>
+	</main>
+
+    <footer class="footerContainer">
+		<div id="generalFooter"><div id="copyrightInfo">
+		Useful Info for Kind People that Care.
+		</div>
+		<ul id="generalPages">
+			<li><a href="#">Home/Country List</a></li>
+			<li><a href="#">Our Team</a></li>
+			<li><a href="#">About/General Info</a></li>
+		</ul>
+		</div>
+		<div id="footerCountrySearch">
+		<input type="text" id="footerInput" onkeyup="footerSearch()" placeholder="Filter by country name..." aria-label="Country Search Filter">
+		<ul id="footerCountries">
+			<li><a href="#">Finland</a></li>
+			<li><a href="#">U.S.A.</a></li>
+			<li><a href="#">South Africa</a></li>
+			<li><a href="#">Chile</a></li>
+			<li><a href="#">South Korea</a></li>
+			<li><a href="#">China</a></li>
+		</ul>
+		</div>
+	</footer>
+  </body>
+</html>
