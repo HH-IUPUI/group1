@@ -1,104 +1,219 @@
+/* font import goes here */
+
+/* start Eric Meyer reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+ v2.0 | 20110126
+ License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end Eric Meyer reset */
 
 *{
 	box-sizing:border-box;
-	margin: 0;
-	padding: 0;
 }
+
 
 
 
 /* ------------------------- styles -------------------------*/
-#staticHeader
-{ width: 100%;
-  height: 75px; 
-  position: fixed;
-  top: 0; 
-  border: 2px solid black; 
-  display: flex; 
-  justify-content: center;
-  align-content: center; }
+body{
+	/* background-color:pink; */
+}
 
-header
-{ border: 2px solid black; 
-  display: flex;
-  margin: auto; }
+#staticHeader {
+	width: 100%;
+	height: 75px; 
+	position: fixed;
+	top: 0;
+	display: flex; 
+	justify-content: center;
+	align-content: center;
+	background-color:white;
+}
 
-#logo
-{ background-color: aliceblue;
-  width: 30px;
-  height: 35px; 
-  border: 2px solid black;
-  display: flex;
-  margin: auto; }
+#logo {	background-color: aliceblue;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	margin: auto;
+}
 
-#siteTitle
-{ margin: 5%;
-  padding: .5em;
-  display: inline-block; }
+header {
+	display: flex;
+	margin: auto;
+}
 
-.navButton
-{ border: 2px solid hotpink;
-  position: fixed;
-  width: 55px;
-  height: 55px; 
-  top: 10px;
-  right: 10px;  }
+#siteTitle {
+	font-size:200%;
+	margin: 0 1em 0 1em;
+	display: inline-block;
+}
 
-#mobileNavCheck
-{ display: none; }
+#navButton {
+	position: fixed;
+	width: 55px;
+	height: 55px; 
+	top: 10px;
+	right: 10px;
+	display: flex;
+	justify-content:center;
+	align-content:center;
+	background-color:GhostWhite;
+}
 
-#staticHeader nav 
-{ display: flex;
-  position: fixed; 
-  top: 75px; 
-  right: 0; 
-  padding: 1em;
-  text-align: right; 
-  background-color: gray; }
+#hamburgerMenuIcon {
+	margin:auto;
+	fill:pink;
+}
 
-li
-{ list-style-type: none; }
+#closeMenuArea {
+	position:fixed;
+	right:-100%;
+	width:100%;
+	height:100%;
+	background-color:lime;
+}
 
-main
-{ margin-top: 75px; }
+#mobileNavCheck {
+	display: none;
+}
 
-footer
-{ background-color: lightGray; 
-  width: 100%; 
-  text-align: center;
-  padding: 1em; }
+#staticHeader nav {
+	display:flex;
+	justify-content: center;
+	align-content: center;
+	position: fixed;
+	top: 75px;
+	right: 0; 
+	background-color: white;
+	padding: 1em;
+	max-width:50%;
+}
 
+#staticHeader nav ul{
+	display:flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+}
+#staticHeader nav ul li {
+	margin:auto;
+}
+
+#headerCountrySearch {
+	display: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+main {
+	margin-top: 75px;
+}
+main #pageTitleWrapper {
+	display:flex;
+	justify-content:center;
+	padding:1em;
+	width:100%;
+}
+main section{
+	max-width:768px;
+	padding:1em;
+	margin:auto;
+}
+
+footer {
+	position:relative;
+	bottom:0;
+	background-color: WhiteSmoke; 
+	width: 100%; 
+	text-align: center;
+	padding: 1em;
+}
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
-#headerCountrySearch
-{ display: none; }
-
-}
+@media only screen and (max-width: 600px) {}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
-
-}
+@media only screen and (min-width: 600px) {}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-	
-
-
+	body{
+		background-color:grey;
+	}
+	#staticHeader{
+		justify-content:space-evenly;
+	}
+	#navButton {
+		display:none;
+	}
+	#staticHeader nav{
+		position:relative;
+		top:auto;
+		right:auto;
+		max-width:auto;
+		margin:auto;
+		border:1px solid lime;
+	}
+	#staticHeader nav ul{
+		flex-direction:row;
+		border:1px solid pink;
+	}
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-	
-
-
-}
+@media only screen and (min-width: 992px) {}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-	
-
+	main {
+		display: flex;
+		flex-direction:column;
+		flex-wrap: wrap;
 }
