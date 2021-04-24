@@ -1,8 +1,9 @@
-/* font import goes here */ /*font-family: 'Lobster', cursive;
-font-family: 'Roboto', sans-serif; font-family: 'Open Sans', sans-serif;*/
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*
+font-family: 'Lobster', serif;
+font-family: 'Open Sans', sans-serif; 
+*/
 
 /* start Eric Meyer reset */
 
@@ -64,9 +65,12 @@ table {
 
 
 /* ------------------------- styles -------------------------*/
+
+/* General, page-level styles */
 body{
-	/* background-color:pink; */
+	background-color:white;
 	font-family: 'Open Sans', sans-serif;
+	color:black;
 }
 
 a {
@@ -74,9 +78,23 @@ a {
 	font-weight: bold;
 	color: #333;
 }
-/* .hideJS {
+
+li {
+	list-style-type: none;
+}
+
+/* Hide JavaScript if Disabled */
+
+.hideJS {
 	display:none;
-} */
+}
+.showJS {
+	display:block;
+}
+
+/* Structural Elements */
+
+/* Static Header */
 
 #staticHeader {
 	width: 100%;
@@ -92,11 +110,11 @@ a {
 }
 
 #logo {
-	background-color: aliceblue;
+	display: flex;
 	width: 30px;
 	height: 30px;
-	display: flex;
 	margin: auto;
+	background-color: aliceblue;
 }
 
 header {
@@ -105,31 +123,39 @@ header {
 }
 
 #siteTitle {
-	font-size:200%;
-	margin: 0 1em 0 1em;
 	display: inline-block;
 	font-family: 'Lobster', serif;
+	font-size:200%;
+	white-space:nowrap;
+	margin: 0 1em 0 1em;
 }
+
+/* Collapsible Hamburger Menu */
 
 #mobileNavCheck {
 	display: none;
 }
 
 #navButton {
+	display: flex;
 	position: fixed;
 	width: 55px;
-	height: 55px; 
+	height: 55px;
 	top: 10px;
 	right: 10px;
-	display: flex;
-	justify-content:center;
-	align-content:center;
 	background-color:GhostWhite;
+	transition:background-color .5s;
+}
+#navButton:hover {
+	background-color:Gainsboro;
 }
 
 #hamburgerMenuIcon {
 	margin:auto;
-	fill:pink;
+}
+#hamburgerMenuIcon rect{
+	fill:#333;
+	border-radius:1px;
 }
 
 #closeMenuArea {
@@ -147,6 +173,12 @@ header {
 	right: 0;
 }
 
+#mobileNavCheck[type=checkbox]:checked ~ #headerNav {
+	right: 0;
+}
+
+/* Header Navigation Appearance */
+
 #headerNav {
 	display:flex;
 	justify-content: center;
@@ -161,10 +193,6 @@ header {
 	z-index: 5;
 }
 
-#mobileNavCheck[type=checkbox]:checked ~ #headerNav {
-	right: 0;
-}
-
 #headerNav ul{
 	display:flex;
 	flex-direction: column;
@@ -172,29 +200,27 @@ header {
 	align-content: center;
 }
 #headerNav ul li {
-	margin: auto;
 	display: block;
+	margin: auto;
 	width: 100%;
 }
 
 #headerNav a { 
-	padding: 1em;
 	display: block;
+	padding: 1em;
 	width: 100%;
 	transition: .5s;
 }
 
 #headerNav a:hover {
-	background: gainsboro;
+	background: Gainsboro;
 }
 
 #headerCountrySearch {
 	display: none;
 }
 
-li {
-	list-style-type: none;
-}
+/* Main Content Appearance */
 
 main {
 	margin-top: 75px;
@@ -207,6 +233,14 @@ main #pageTitleWrapper {
 	width:100%;
 }
 
+#pageTitle {
+	font-size: 180%;
+	font-weight:bold;
+	color: #333;
+}
+
+/* Section Appearance */
+
 main section{
 	max-width:768px;
 	padding:1em;
@@ -217,18 +251,13 @@ main section, main #pageTitleWrapper {
 	margin:0 auto 2em auto;
 }
 
-#pageTitle {
-	font-size: 180%;
-	font-weight:bold;
-	color: #333;
-}
-
 .sectionHeader {
 	display:flex;
 	flex-direction:row;
 	flex-wrap:nowrap;
 	justify-content:space-between;
 	padding: 1em;
+	cursor:pointer;
 }
 
 section h2 {
@@ -237,6 +266,12 @@ section h2 {
 	text-align: center;
 	color: #333;
 }
+
+section p {
+	line-height:1.5em;
+}
+
+/* Collapsible Section Functionality */
 
 .contentCheck {
 	display:none;
@@ -252,6 +287,11 @@ section h2 {
 	background-color:Gainsboro;
 	width:1em;
 	text-align:center;
+	transition:background-color .5s;
+}
+
+.minmax:hover{
+	background-color:GhostWhite;
 }
 
 .minmax::after {
@@ -262,16 +302,27 @@ section h2 {
 	content:"+";
 }
 
-section p {
-	line-height:1.5em;
-}
+/* Footer Appearance */
 
 footer {
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-content:center;
 	background-color: WhiteSmoke; 
 	width: 100%; 
 	text-align: center;
 	padding: 1em;
-	z-index:1;
+	line-height:1.4em;
+}
+footer div, footer nav{
+	padding: 1em 0;
+}
+#footerInput{
+	margin:auto;
+}
+#footerInfo{
+	order:2;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -283,14 +334,20 @@ footer {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 	
+	/* Header Appearance */
+	
 	#staticHeader{
 		justify-content:space-evenly;
 	}
-	header {
-	}
+	
+	/* Hide Hamburger Button */
+	
 	#navButton {
 		display:none;
 	}
+	
+	/* Header Navigation Appearance */
+	
 	#headerNav{
 		position:static;
 		max-width:auto;
@@ -321,6 +378,8 @@ footer {
 		height:75px;
 	}
 	
+	/* Header Navigation Country Filter */
+	
 	#headerCountrySearch {
 		display:flex;
 		flex-direction:column;
@@ -346,10 +405,12 @@ footer {
 		flex-direction:row;
 		flex-wrap:wrap;
 	}
+	
 	#headerCountries li {
 		margin:auto;
 		width:auto;
 	}
+	
 	#headerCountries a{
 		display:block;
 		height:auto;
@@ -360,15 +421,32 @@ footer {
 		margin:1em auto;
 	}
 	
+	/* Main Content Appearance */
 	
-
 	main {
 		display: flex;
 		flex-direction:column;
 		margin: 75px auto 0 auto;
 	}
+	
 	main section {
 		max-width:768px;
+	}
+	
+	/* Footer Appearance */
+	
+	footer {
+		flex-direction:row;
+		text-align: left;
+	}
+	
+	footer div, footer nav{
+		padding: 2em;
+	}
+	
+	#footerInfo{
+		max-width:30em;
+		order:-1;
 	}
 }
 
@@ -378,6 +456,8 @@ footer {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 	
+	/* Large-Screen 2-Column Appearance */
+	
 	main {
 		display: flex;
 		flex-direction: row;
@@ -386,9 +466,6 @@ footer {
 		max-width:1500px;
 	}
 	
-	main section {
-		
-	}
 	#leftColumn, #rightColumn {
 		width: 50%;
 		padding: 0 1em;
