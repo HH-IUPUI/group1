@@ -1,0 +1,400 @@
+/* font import goes here */ /*font-family: 'Lobster', cursive;
+font-family: 'Roboto', sans-serif; font-family: 'Open Sans', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* start Eric Meyer reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+ v2.0 | 20110126
+ License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end Eric Meyer reset */
+
+*{
+	box-sizing:border-box;
+}
+
+
+
+
+/* ------------------------- styles -------------------------*/
+body{
+	/* background-color:pink; */
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	text-decoration: none; 
+	font-weight: bold;
+	color: #333;
+}
+/* .hideJS {
+	display:none;
+} */
+
+#staticHeader {
+	width: 100%;
+	height: 75px; 
+	position: fixed;
+	top: 0;
+	display: flex; 
+	justify-content: center;
+	align-content: center;
+	background-color:white;
+	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+#logo {
+	background-color: aliceblue;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	margin: auto;
+}
+
+header {
+	display: flex;
+	margin: auto;
+}
+
+#siteTitle {
+	font-size:200%;
+	margin: 0 1em 0 1em;
+	display: inline-block;
+	font-family: 'Lobster', serif;
+}
+
+#mobileNavCheck {
+	display: none;
+}
+
+#navButton {
+	position: fixed;
+	width: 55px;
+	height: 55px; 
+	top: 10px;
+	right: 10px;
+	display: flex;
+	justify-content:center;
+	align-content:center;
+	background-color:GhostWhite;
+}
+
+#hamburgerMenuIcon {
+	margin:auto;
+	fill:pink;
+}
+
+#closeMenuArea {
+	position:fixed;
+	right: -100%;
+	top:0;
+	width:100%;
+	height:100%;
+	background-color:rgba( 0, 0, 0, .2);
+	z-index: 3;
+	transition: .5s ease-in;
+}
+
+#mobileNavCheck[type=checkbox]:checked ~ #navButton #closeMenuArea {
+	right: 0;
+}
+
+#headerNav {
+	display:flex;
+	justify-content: center;
+	align-content: center;
+	position: fixed;
+	right: -100%;
+	top: 75px;
+	background-color: white;
+	padding: 1em;
+	max-width:50%;
+	transition: right .5s ease-in;
+	z-index: 5;
+}
+
+#mobileNavCheck[type=checkbox]:checked ~ #headerNav {
+	right: 0;
+}
+
+#headerNav ul{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
+#headerNav ul li {
+	margin: auto;
+	display: block;
+	width: 100%;
+}
+
+#headerNav a { 
+	padding: 1em;
+	display: block;
+	width: 100%;
+	transition: .5s;
+}
+
+#headerNav a:hover {
+	background: gainsboro;
+}
+
+#headerCountrySearch {
+	display: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+main {
+	margin-top: 75px;
+	padding: 1em;
+}
+main #pageTitleWrapper {
+	display:flex;
+	justify-content:center;
+	padding:1em;
+	width:100%;
+}
+
+main section{
+	max-width:768px;
+	padding:1em;
+}
+
+main section, main #pageTitleWrapper {
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+	margin:0 auto 2em auto;
+}
+
+#pageTitle {
+	font-size: 180%;
+	font-weight:bold;
+	color: #333;
+}
+
+.sectionHeader {
+	display:flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	justify-content:space-between;
+	padding: 1em;
+}
+
+section h2 {
+	font-family: 'Lobster', serif;
+	font-size: 160%;
+	text-align: center;
+	color: #333;
+}
+
+.contentCheck {
+	display:none;
+}
+
+.contentCheck[type=checkbox]:checked ~ .sectionContent {
+	display:none;
+}
+
+.minmax {
+	font-size:150%;
+	font-weight:bold;
+	background-color:Gainsboro;
+	width:1em;
+	text-align:center;
+}
+
+.minmax::after {
+	content:"-";
+}
+
+.contentCheck[type=checkbox]:checked ~ .contentbutton .sectionHeader .minmax::after {
+	content:"+";
+}
+
+section p {
+	line-height:1.5em;
+}
+
+footer {
+	background-color: WhiteSmoke; 
+	width: 100%; 
+	text-align: center;
+	padding: 1em;
+	z-index:1;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	
+	#staticHeader{
+		justify-content:space-evenly;
+	}
+	header {
+	}
+	#navButton {
+		display:none;
+	}
+	#headerNav{
+		position:static;
+		max-width:auto;
+		width:auto;
+		right: initial;
+		top: initial;
+		margin:auto;
+		padding: 0;
+		transition: all 0;
+	}
+	
+	#headerNav ul{
+		flex-direction:row;
+		flex-wrap:nowrap;
+		align-content:center;
+	}
+	
+	#headerNav ul li {
+		white-space:nowrap;
+		width:auto;
+	}
+	
+	#headerNav a {
+		display:flex;
+		align-items:center;
+		margin:auto;
+		padding:1em;
+		height:75px;
+	}
+	
+	#headerCountrySearch {
+		display:flex;
+		flex-direction:column;
+		align-content:center;
+		position:fixed;
+		background-color:white;
+		right:-100%;
+		top:75px;
+		width:60%;
+		padding:1em;
+		transition-delay:1s;
+		box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+	}
+	
+	#countriesDropDown:hover #headerCountrySearch {
+		right:0;
+		transition-delay:0s;
+	}
+	
+	#headerNav #headerCountries {
+		position:static;
+		display:flex;
+		flex-direction:row;
+		flex-wrap:wrap;
+	}
+	#headerCountries li {
+		margin:auto;
+		width:auto;
+	}
+	#headerCountries a{
+		display:block;
+		height:auto;
+		width:auto;
+	}
+	
+	#headerInput{
+		margin:1em auto;
+	}
+	
+	
+
+	main {
+		display: flex;
+		flex-direction:column;
+		margin: 75px auto 0 auto;
+	}
+	main section {
+		max-width:768px;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+	
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	
+	main {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content:center;
+		max-width:1500px;
+	}
+	
+	main section {
+		
+	}
+	#leftColumn, #rightColumn {
+		width: 50%;
+		padding: 0 1em;
+	}
+	
+	#pageTitleWrapper {
+		width: 100%;
+	}
+}
