@@ -245,6 +245,7 @@ main #pageTitleWrapper {
 	font-size: 100%;
 	font-weight: bold;
 	color: #333;
+	margin-left:.3em;
 }
 
 /* Section Appearance */
@@ -441,7 +442,7 @@ footer div, footer nav{
 	
 	main #pageTitleWrapper {
 		justify-content:flex-start;
-		margin-left: 20vw;
+		padding-left: 20vw;
 	}
 	
 	/* Footer Appearance */
