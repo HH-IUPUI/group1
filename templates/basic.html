@@ -34,9 +34,9 @@
 			<div id="siteTitle">Culture Guide</div>
 		</header>
 		<input id="mobileNavCheck" type="checkbox" aria-label="Navigation Toggle" />
-		<nav>
+		<nav id="headerNav">
 			<ul>
-				<li><a href="#">Countries</a>
+				<li id="countriesDropDown"><a href="#">Countries</a>
 					<div id="headerCountrySearch">
 						<input type="text" id="headerInput" onkeyup="itemFilter('headerInput', 'headerCountries')" placeholder="Filter by country name..." aria-label="Header Country Filter" class="hideJS">
 						<ul id="headerCountries">
@@ -57,19 +57,20 @@
 				<rect width="100" height="10" fill="#555" rx="5"></rect>
 				<rect y="30" width="100" height="10" fill="#555" rx="5"></rect>
 				<rect y="60" width="100" height="10" fill="#555" rx="5"></rect>
-				</svg>
-				<div id="closeMenuArea" aria-label="Mobile Navigation Toggle"></div>
+			</svg>
+			<div id="closeMenuArea" aria-label="Mobile Navigation Toggle"></div>
 		</label>
 	</div>
 
 <main class="mainContainer">
 	<div id="pageTitleWrapper"><h1 id="pageTitle">Page Title</h1></div>
-
+<div id="leftColumn">
 <section>
 	<h2>Section 1 Title</h2>
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam efficitur dolor eget faucibus tempor. Mauris pulvinar orci nec felis dapibus convallis. In dapibus tempor nulla, vel vestibulum orci elementum quis. Integer sed erat eget tellus pulvinar tempor et non purus. Nam nec vulputate leo. Nam sed posuere ante. Ut nec sem non lectus vestibulum dictum. Vestibulum in purus purus. Sed congue nibh ac quam mattis blandit. Aliquam porttitor sed odio ut tempus. Fusce lobortis eu magna non tristique. Pellentesque laoreet efficitur nunc ut facilisis. Nunc congue ligula risus, at dictum ipsum sodales eget.</p>
 </section>
-
+</div>
+<div id="rightColumn">
 <section>
 	<h2>Section 2 Title</h2>
 	<p>Curabitur eget ex consectetur, rhoncus est nec, vulputate sem. Aenean eu sapien sodales, sagittis dui vel, mattis nulla. Suspendisse pulvinar dui diam, sed ornare augue dictum quis. Pellentesque sed tristique dolor. Duis vitae justo vitae sem ultricies rutrum. Vestibulum eu rhoncus tellus. Aliquam erat volutpat. Proin eget commodo odio. </p>
@@ -82,7 +83,7 @@
 	
 	
 </section>
-
+</div>
 </main>
 
 <footer>

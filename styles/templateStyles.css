@@ -1,4 +1,8 @@
-/* font import goes here */
+/* font import goes here */ /*font-family: 'Lobster', cursive;
+font-family: 'Roboto', sans-serif; font-family: 'Open Sans', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* start Eric Meyer reset */
 
@@ -62,6 +66,7 @@ table {
 /* ------------------------- styles -------------------------*/
 body{
 	/* background-color:pink; */
+	font-family: 'Open Sans', sans-serif;
 }
 
 #staticHeader {
@@ -73,9 +78,12 @@ body{
 	justify-content: center;
 	align-content: center;
 	background-color:white;
+	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+
 }
 
-#logo {	background-color: aliceblue;
+#logo {
+	background-color: aliceblue;
 	width: 30px;
 	height: 30px;
 	display: flex;
@@ -91,6 +99,7 @@ header {
 	font-size:200%;
 	margin: 0 1em 0 1em;
 	display: inline-block;
+	font-family: 'Lobster', cursive;
 }
 
 #navButton {
@@ -112,26 +121,56 @@ header {
 
 #closeMenuArea {
 	position:fixed;
-	right:-100%;
+	right: -100%;
 	width:100%;
 	height:100%;
-	background-color:lime;
+	background-color:rgba( 0, 0, 0, .2);
+	z-index: 3;
+	transition: .5s ease-in;
+}
+
+#mobileNavCheck[type=checkbox]:checked ~ #navButton #closeMenuArea {
+	right: 0;
 }
 
 #mobileNavCheck {
 	display: none;
 }
 
-#staticHeader nav {
+#headerNav {
 	display:flex;
 	justify-content: center;
 	align-content: center;
 	position: fixed;
+	right: -100%;
 	top: 75px;
-	right: 0; 
 	background-color: white;
 	padding: 1em;
 	max-width:50%;
+	transition: .5s ease-in;
+	z-index: 5;
+}
+
+#mobileNavCheck[type=checkbox]:checked ~ #headerNav {
+	right: 0;
+}
+
+#staticHeader a { 
+	padding: 1em;
+	margin: .5em;
+	display: block;
+	width: 100%;
+	transition: .5s;
+}
+
+#staticHeader a:hover {
+	background: gainsboro;
+}
+
+a {
+	text-decoration: none; 
+	font-weight: bold;
+	color: #333;
 }
 
 #staticHeader nav ul{
@@ -142,6 +181,8 @@ header {
 }
 #staticHeader nav ul li {
 	margin:auto;
+	display: block;
+	width: 100%;
 }
 
 #headerCountrySearch {
@@ -154,6 +195,7 @@ li {
 
 main {
 	margin-top: 75px;
+	padding: 1em;
 }
 main #pageTitleWrapper {
 	display:flex;
@@ -161,10 +203,28 @@ main #pageTitleWrapper {
 	padding:1em;
 	width:100%;
 }
+
 main section{
 	max-width:768px;
 	padding:1em;
-	margin:auto;
+}
+
+main section, main #pageTitleWrapper {
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+	margin:0 auto 2em auto;
+}
+
+#pageTitle {
+	font-size: 180%;
+	font-family: 'Lobster', cursive;
+	color: #333;
+}
+
+h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 130%;
+	text-align: center;
+	padding: 1em;
 }
 
 footer {
@@ -184,9 +244,7 @@ footer {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-	body{
-		background-color:grey;
-	}
+	
 	#staticHeader{
 		justify-content:space-evenly;
 	}
@@ -194,26 +252,71 @@ footer {
 		display:none;
 	}
 	#staticHeader nav{
-		position:relative;
+		position: relative;
 		top:auto;
 		right:auto;
 		max-width:auto;
 		margin:auto;
-		border:1px solid lime;
+		height: 100%;
 	}
+	
+	/*#staticHeader ul, #staticHeader li, #staticHeader a {
+		height: inherit;
+		padding-top: 0;
+		padding-bottom: 0;
+		margin-top: 0;
+		margin-bottom: 0;
+	}*/
+	
+	#headerCountrySearch {
+		display: block;
+		background-color: gray;
+		position: fixed;
+		top: 75px;
+		display: none;
+	}
+	
+	#countriesDropDown:hover #headerCountrySearch {
+		display: block;
+	}
+	
+	
+	#staticHeader a {
+		padding-top: 0;
+		padding-bottom: 0;
+		width: auto;
+		height: 100%;
+		display: block;
+	}
+	
 	#staticHeader nav ul{
 		flex-direction:row;
 		border:1px solid pink;
+		margin: 0;
 	}
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {}
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
 	main {
 		display: flex;
-		flex-direction:column;
+		flex-direction: row;
 		flex-wrap: wrap;
+	}
+	
+	main section {
+		width: 45%;
+	}
+	
+	#pageTitleWrapper {
+		width: 100%;
+	}
+	
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	/*main {
+		display: flex;
+		flex-direction:column;
+		flex-wrap: wrap;*/
 }
