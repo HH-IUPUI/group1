@@ -1,0 +1,55 @@
+
+
+
+
+*{
+	box-sizing:border-box;
+}
+
+
+
+/* ------------------------- styles -------------------------*/
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+#pageTitle {
+	font-family: 'Roboto', sans-serif;
+}
+
+#a {
+	border-top: 2px solid darkslategrey;
+}
+
+#a, #b, #c, #d {
+	/*background-color: pink;*/
+	margin-bottom: .5em;
+	border-bottom: 2px solid darkslategrey;
+}
+
+h3 {
+	/*background-color: grey;*/
+	font-size: 120%;
+	font-weight: 700;
+	padding: .5em;
+	padding-left: 1em;
+}
+
+.img1 { 
+	display: none; 
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+	
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
