@@ -85,9 +85,7 @@ nav{
     }
     .card-container__card{
         margin-top: 13%;
-        
     
-        
     }
 }
 
@@ -116,7 +114,7 @@ nav{
 .card-container__card{
     display: flex; 
     justify-content: space-evenly;
-    margin-top: 9%;
+    margin-top: 3%;
     margin-left: 10%;
     margin-right: 10%;
     width: 80vw;
