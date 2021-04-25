@@ -1,0 +1,153 @@
+#pageTitleWrapper {
+	visibility:hidden;
+}
+
+/*Here starts the style of the big card in the landing page*/
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	max-width:100%;
+}
+
+.card-container__card{
+    display: flex; 
+    justify-content: space-evenly;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+
+    
+}
+
+.card-container__card__image{
+  width: 60%;
+  border-radius: 20px 0  0 20px  ;
+
+}
+.card-container__car__info{
+    font-family: 'Roboto', sans-serif;
+
+    background-color:rgba(0, 0, 0, 0.075);
+    border-radius: 0 20px 20px 0 ;
+    padding: 1%;
+   
+}
+.card-container__card__info__title {
+   font-size: 1.5rem;
+   font-weight:lighter;
+   margin: 5%;
+   
+
+}
+.card-container__card__info__description {
+   font-size: 1rem;
+   margin:5%;
+   font-weight: lighter;
+  
+}
+
+.card-container__card__info__read-more__button{
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    justify-content: flex-end;
+    position: relative;
+    left: 20%;
+    border-style: none;
+    outline: none;
+    padding: 2%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.card-container__card__info__read-more__button:hover{
+    background-color: rgba(0, 0, 0, 0.116);
+
+}
+
+
+/* styles for the searching bar and its icon*/
+
+#search-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3%;
+}
+
+.search-box__icon{
+    width: 7%;
+    height: 6vh;
+    background-color:rgba(0, 0, 0, 0.07);
+    border-radius: 25px 0 0 25px;
+    padding: 1%;
+}
+
+#search-box_bar{
+    width: 70vw;
+    height: 6vh;
+    border-radius: 0 25px 25px 0;
+    background-color: rgba(0, 0, 0, 0.07);
+    border-style: none;
+    outline: none;
+}
+
+/* style for the search area for small cards*/
+
+#search-card-area{
+    background-color: rgba(0, 0, 0, 0.03);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2%;
+    margin: 5%;
+    padding: 3%;
+    width: 87vw;
+    border-radius: 20px;
+    
+}
+.search-card-area__small-card{
+    border-radius: 20px;
+    margin: 1%;
+    box-sizing: border-box;
+    box-shadow: 20px;
+
+    }
+
+.search-card-area__small-card__img{
+    border-radius: 20px 20px 0 0;
+    width: 24vw;
+}
+.search-card-area__small-card__info{
+	display:block;
+    font-family: 'Roboto', sans-serif;
+    height: 6vh;
+	width: 24vw;
+    background-color: rgba(0, 0, 0, 0.082);
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    font-weight: lighter;
+    padding-top:10px ;
+	overflow-wrap:break-word;
+}
+
+/* This is the part related to the styling of the footer */
+.footer-container__footer{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.082);
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+    max-height: 18vh;
+    gap: 20px;
+    margin-bottom: 0;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	
+	/* Large-Screen 2-Column Appearance */
+	
+	
