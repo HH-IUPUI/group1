@@ -52,4 +52,19 @@ h3 {
 @media only screen and (min-width: 992px) {}
 	
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+	
+	main section, main #pageTitleWrapper {
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+	margin:0 auto 2em auto;
+	background-color: pink;
+}
+
+	#bottomSection {
+		background-color: lime;
+	}
+	
+	.img1 {
+		display: inline;
+	}
+}
