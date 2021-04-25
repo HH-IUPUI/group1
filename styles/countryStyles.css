@@ -138,7 +138,7 @@ h6 {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 1500;
+  z-index: 3000;
   -webkit-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   opacity: 0;
@@ -197,6 +197,8 @@ h6 {
   display: inline-block;
 }
 
+/* functionality of nav */
+/* on hover - animation of hamburger menu */
 .navigation__link:hover,
 .navigation__link:active {
   background-position: 100%;
@@ -204,6 +206,8 @@ h6 {
   -webkit-transform: translateY(1rem);
   transform: translateY(1rem);
 }
+
+/* when clicked take up the entire page and cover the back */
 
 .navigation__checkbox:checked ~ .navigation__background {
   -webkit-transform: scale(80);
@@ -214,6 +218,8 @@ h6 {
   opacity: 1;
   width: 100%;
 }
+
+/* the hamburger menu changes into an "x" to show the exit button */
 
 .navigation__icon {
   position: relative;
@@ -267,6 +273,8 @@ h6 {
 .navigation__btn:hover .navigation__icon::after {
   top: 1rem;
 }
+
+/* when the "x" is clicked - the menu disappears */
 
 .navigation__checkbox:checked + .navigation__btn .navigation__icon {
   background-color: transparent;
