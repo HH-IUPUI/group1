@@ -87,7 +87,7 @@
           <li><a href="../pages/generalGuidance.html">General Guidance</a></li>
         </ul>
       </nav>
-      <label id="navButton" for="mobileNavCheck">
+      <label id="navButton" for="mobileNavCheck" role="button">
         <svg
           id="hamburgerMenuIcon"
           viewBox="0 0 100 80"
