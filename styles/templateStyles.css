@@ -112,15 +112,16 @@ li {
 
 #logo {
 	display: flex;
-	width: 30px;
-	height: 30px;
+	width: 60px;
+	height: 60px;
 	margin: auto;
-	background-color: aliceblue;
+	background-color: transparent;
 }
 
 header {
 	display: flex;
 	flex-direction:row;
+	align-items:center;
 	margin: auto;
 }
 
@@ -147,6 +148,7 @@ header {
 	right: 10px;
 	background-color:GhostWhite;
 	transition:background-color .5s;
+	cursor:pointer;
 }
 #navButton:hover {
 	background-color:Gainsboro;
@@ -169,6 +171,7 @@ header {
 	background-color:rgba( 0, 0, 0, .2);
 	z-index: 3;
 	transition: .5s ease-in;
+	cursor:pointer;
 }
 
 #mobileNavCheck[type=checkbox]:checked ~ #navButton #closeMenuArea {
@@ -391,7 +394,7 @@ footer div, footer nav{
 		flex-direction:column;
 		align-content:center;
 		position:fixed;
-		background-color:white;
+		background-color:GhostWhite;
 		right:-100%;
 		top:75px;
 		width:60%;
@@ -454,6 +457,11 @@ footer div, footer nav{
 	
 	footer div, footer nav{
 		padding: 2em;
+	}
+	
+	#footerInput{
+		margin-right:auto;
+		margin-left:0;
 	}
 	
 	#footerInfo{
