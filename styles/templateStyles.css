@@ -68,7 +68,7 @@ table {
 
 /* General, page-level styles */
 body{
-	background-color:white;
+	background-color: #e6eaf3;
 	font-family: 'Open Sans', sans-serif;
 	color:black;
 }
@@ -226,7 +226,7 @@ header {
 }
 
 #headerNav a:hover {
-	background: Gainsboro;
+	background-color: #e6eaf3;
 }
 
 #headerCountrySearch {
@@ -250,7 +250,7 @@ main #pageTitleWrapper {
 	margin: auto;
 	padding:.5em 2em;
 	width:100%;
-	background-color:white;
+	background-color: #e6eaf3;
 }
 
 #pageTitle {
@@ -270,6 +270,7 @@ main section{
 	padding:1em;
 	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 	margin:0 auto 2em auto;
+	background-color: white;
 }
 
 .sectionHeader {
@@ -304,7 +305,7 @@ section p {
 .minmax {
 	font-size:150%;
 	font-weight:bold;
-	background-color:Gainsboro;
+	background-color: #e6eaf3;
 	width:1em;
 	height:1em;
 	text-align:center;
@@ -312,7 +313,7 @@ section p {
 }
 
 .minmax:hover{
-	background-color:GhostWhite;
+	background-color: #c1c8e2;
 }
 
 .minmax::after {
@@ -330,7 +331,7 @@ footer {
 	flex-direction:column;
 	justify-content:center;
 	align-content:center;
-	background-color: WhiteSmoke; 
+	background-color: #c1c8e2; 
 	width: 100%; 
 	text-align: center;
 	padding: 1em;
