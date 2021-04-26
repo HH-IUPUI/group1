@@ -1,0 +1,69 @@
+body {
+	background-color: #111;
+	color:#eee;
+}
+
+#staticHeader {
+	background-color:#333;
+	color:#eee;
+}
+#staticHeader a {
+	color:#eee;
+}
+#headerNav{
+	background-color: #333;
+}
+#headerNav a {
+	background-color: #333;
+	color: #eee;
+}
+#headerNav a:hover {
+	background-color: #111;
+	color: #eee;
+}
+#headerCountrySearch {
+	background-color: #333;
+}
+
+#navButton {
+	background-color:#222;
+}
+#navButton:hover {
+	background-color:#111;
+}
+#hamburgerMenuIcon rect{
+	fill:#eee;
+}
+
+main #pageTitleWrapper {
+	background-color: #333;
+	color: #eee;
+}
+main #pageTitleWrapper a{
+	color: #eee;
+}
+#pageTitle {
+	color: #eee;
+}
+
+main section {
+	background-color: #333;
+}
+main section h2 {
+	color: #eee;
+}
+
+.minmax {
+
+	background-color: #222;
+}
+
+.minmax:hover{
+	background-color: #000;
+}
+footer {
+	background-color: #000;
+}
+footer a {
+	color: #999;
+}

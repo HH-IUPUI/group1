@@ -106,30 +106,41 @@ li {
 	align-content: center;
 	background-color:white;
 	/* box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2); */
-	
 	z-index:3;
 }
 
-#logo {
-	display: flex;
-	width: 30px;
-	height: 30px;
-	margin: auto;
-	background-color: aliceblue;
+header {
+	display:flex;
+	margin:auto;
 }
 
-header {
+.headerLink {
 	display: flex;
 	flex-direction:row;
+	flex-wrap:nowrap;
+	justify-content:flex-start;
+	align-items:center;
 	margin: auto;
+}
+
+#logo {
+	display: block;
+	width: 50px;
+	height: 50px;
+	margin: auto;
+}
+#logo img {
+	height:100%;
+	width:100%;
 }
 
 #siteTitle {
-	display: inline-block;
+	display: block;
 	font-family: 'Lobster', serif;
 	font-size:200%;
 	white-space:nowrap;
-	margin: 0 1em 0 1em;
+	margin: auto;
+	padding: 0 .8em;
 }
 
 /* Collapsible Hamburger Menu */
@@ -225,6 +236,7 @@ header {
 /* Main Content Appearance */
 
 main {
+	margin:auto;
 	margin-top: 105px;
 	padding: 1em;
 	z-index:1;
@@ -243,9 +255,12 @@ main #pageTitleWrapper {
 
 #pageTitle {
 	font-size: 100%;
-	font-weight: bold;
+	font-weight: normal;
 	color: #333;
 	margin-left:.3em;
+}
+#pageTitleWrapper a {
+	margin-right: .5em;
 }
 
 /* Section Appearance */
@@ -356,13 +371,13 @@ footer div, footer nav{
 	
 	#headerNav{
 		position:static;
-		max-width:auto;
+		max-width:initial;
 		width:auto;
 		right: initial;
 		top: initial;
 		margin:auto;
 		padding: 0;
-		transition: all 0;
+		transition: all 0s;
 	}
 	
 	#headerNav ul{
@@ -459,6 +474,10 @@ footer div, footer nav{
 	#footerInfo{
 		max-width:30em;
 		order:-1;
+	}
+	#footerInput{
+		margin-left:0;
+		margin-right:auto;
 	}
 }
 
