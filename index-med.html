@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="styles/templateStyles.css" />
 	
     <!-- InstanceBeginEditable name="page-specificStyleSheet" -->
-	<link rel="stylesheet" href="styles/indexStyles.css" />
+	<link rel="stylesheet" href="styles/indexStyles-.css" />
 	<!-- InstanceEndEditable -->
 	
 	<!-- jquery library -->
@@ -112,14 +112,12 @@
       </div>
 
       <!-- InstanceBeginEditable name="mainContent" -->
-  <div class="card-container">
+<div class="card-container">
       <div class="card-container__card">
-
-          <img class="card-container__card__image" src="images/cardimg.jpg" alt="Image of a group of friends enjoying together with a landscape of the city behind them" >
-
+          <img class="card-container__card__image" src="images/aurora1.jpg" alt="Northen light image" >
       <div class="card-container__car__info">
-              <h1 class="card-container__card__info__title">Welcome!</h1>
-              <h3 class="card-container__card__info__description">This is a simple description of something related to the country Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+              <h1 class="card-container__card__info__title">Finland</h1>
+              <a class="card-container__card__info__description">This is a simple description of something related to the country Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
       <div class="card-container__card__info__read-more">
                   <button class="card-container__card__info__read-more__button">Read more</button>
       </div>
@@ -128,39 +126,37 @@
   </div>
 
   
-  <div id="smallCardContainer">
-    <div id="search-box">
+  <div id="smallCardList">
+		<div class="hideJS">
+		  <div id="search-box">
 			<img class="search-box__icon" src="images/search.svg" alt="search svg icon">
 			<input id="search-box_bar" type="text" name="" placeholder="Search" onkeyup="cardFilter()">
-	</div>
-      <div id="search-card-area">
-        <div class="search-card-area__small-card">
-
-          <img class="search-card-area__small-card__img" src="images/finland.jpg" alt=" Cathedral in Helsinki finland">
-          <a class="search-card-area__small-card__info" href="pages/countries/finland.html"><span class="smallCardCountryLink">Finland</span></a>
+		  </div>
+		</div>
+      <ul id="search-card-area">
+        
+		<div class="search-card-area__small-card">
+          <img class="search-card-area__small-card__img" src="images/aurora1.jpg" alt="#">
+          <a class="search-card-area__small-card__info">Finland</a>
         </div>
         <div class="search-card-area__small-card">
-          <img class="search-card-area__small-card__img" src="images/chile1.jpg" alt="picture of Costanera tower in Santiago, Chile">
-          <a class="search-card-area__small-card__info" href="pages/countries/chile.html">Chile</a>
+          <img class="search-card-area__small-card__img" src="images/america.jpg" alt="#">
+          <a class="search-card-area__small-card__info">USA (United States of America)</a>
         </div>
         <div class="search-card-area__small-card">
-          <img class="search-card-area__small-card__img" src="images/usa.jpg" alt="Picture of the empire state building">
-          <a class="search-card-area__small-card__info" href="pages/countries/unitedStates.html">USA<span class="hiddenName"> (United States of America)</span></a>
+          <img class="search-card-area__small-card__img" src="images/southafrica.jpg" alt="#">
+          <a class="search-card-area__small-card__info">South Africa</a>
+        </div>
+		<div class="search-card-area__small-card">
+          <img class="search-card-area__small-card__img" src="images/chile.jpg" alt="#">
+          <a class="search-card-area__small-card__info">Chile)</a>
         </div>
         <div class="search-card-area__small-card">
-          <img class="search-card-area__small-card__img" src="images/southKorea1.jpg" alt="picture of Lotte World Tower in Seul, South Korea">
-          <a class="search-card-area__small-card__info" href="pages/countries/southKorea.html">South Korea <span class="hiddenName"> (Republic of Korea, ROK)</span></a>
+          <img class="search-card-area__small-card__img" src="images/korea.jpg" alt="#">
+          <a class="search-card-area__small-card__info">South Korea</a>
         </div>
-        <div class="search-card-area__small-card">
-          <img class="search-card-area__small-card__img" src="images/southAfrica1.jpg" alt="Picture of Cape Town, South Africa">
-          <a class="search-card-area__small-card__info" href="southAfrica.html">South Africa</a>
-        </div>
-        <div class="search-card-area__small-card">
-          <img class="search-card-area__small-card__img" src="images/china.jpg" alt="Picture of Temple of Heaven, Beijing, China">
-          <a class="search-card-area__small-card__info" href="pages/countries/china.html">China</a>
-
-        </div>
-      </div>
+		
+      </ul>
   </div>
 <!-- InstanceEndEditable -->
     </main>
