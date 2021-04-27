@@ -373,10 +373,14 @@ footer {
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) {
+	
+}
 	
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+	
+	
 	
 	main {
 		display: flex;
@@ -386,15 +390,9 @@ footer {
 		max-width:1500px;
 	}
 	
-	main section {
-		
-	}
 	#leftColumn, #rightColumn {
 		width: 50%;
 		padding: 0 1em;
 	}
 	
-	#pageTitleWrapper {
-		width: 100%;
-	}
 }
