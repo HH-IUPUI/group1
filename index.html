@@ -130,36 +130,33 @@
             alt="Image of a group of friends enjoying together with a landscape of the city behind them"
           />
 
-          <div class="card-container__car__info">
+          <div class="card-container__card__info">
             <h1 class="card-container__card__info__title">Welcome!</h1>
-            <h3 class="card-container__card__info__description">
-              This is a simple description of something related to the country
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </h3>
-            <div class="card-container__card__info__read-more">
-              <button class="card-container__card__info__read-more__button">
-                Read more
-              </button>
-            </div>
+            <p class="card-container__card__info__description">
+              Welcome to the Culture Guide! Traveling and living in a new place comes with many challenges, and everyone experiences <a href="pages/generalGuidance.html">culture shock</a> to some degree. We hope to share personal stories and experiences to help you through the "frustration" phase. Check out our tips for the countries below!
+            </p>
           </div>
         </div>
       </div>
 
       <div id="smallCardContainer">
-        <div id="search-box">
-          <img
-            class="search-box__icon"
-            src="images/search.svg"
-            alt="search svg icon"
-          />
-          <input
-            id="search-box_bar"
-            type="text"
-            name=""
-            placeholder="Search"
-            onkeyup="cardFilter()"
-          />
-        </div>
+	    <div class="hideJS">
+          <div id="search-box">
+            <img
+              class="search-box__icon"
+              src="images/search.svg"
+              alt="search svg icon"
+            />
+            <input
+              id="search-box_bar"
+              type="text"
+              name=""
+              placeholder="Filter countries by name..."
+			  aria-label="Filter Countries Search Bar"
+              onkeyup="cardFilter()"
+            />
+          </div>
+		</div>
         <div id="search-card-area">
           <div class="search-card-area__small-card">
             <img
