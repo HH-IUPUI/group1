@@ -267,7 +267,7 @@ main #pageTitleWrapper {
 
 main section{
 	max-width:768px;
-	padding:1em;
+	padding:2em;
 	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 	margin:0 auto 2em auto;
 	background-color: white;
@@ -280,6 +280,7 @@ main section{
 	justify-content:space-between;
 	padding: 1em;
 	cursor:pointer;
+	margin-bottom:1em;
 }
 
 section h2 {
