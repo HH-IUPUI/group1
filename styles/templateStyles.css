@@ -271,6 +271,7 @@ main section{
 	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 	margin:0 auto 2em auto;
 	background-color: white;
+	border-radius:20px;
 }
 
 .sectionHeader {
