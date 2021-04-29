@@ -161,6 +161,10 @@ li {
   list-style-type: none;
 }
 
+em {
+	font-style:italic;
+}
+
 /* Hide JavaScript if Disabled */
 
 .hideJS {
@@ -370,11 +374,16 @@ section h2 {
 section h3 {
   font-size: 120%;
   font-weight: bold;
-  margin-top: 0.5em;
+  margin: 0.5em auto;
 }
 
 section p {
   line-height: 1.5em;
+}
+
+section li {
+	margin:1em;
+	line-height: 1.5em;
 }
 
 /* Collapsible Section Functionality */
