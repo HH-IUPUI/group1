@@ -4,12 +4,17 @@
   "description": "This directory contains starter files (templates) for a home page.",
   "main": "index.html",
   "dependencies": {
-
+    "@lodder/grunt-postcss": "^3.0.1",
+    "autoprefixer": "^10.2.5",
+    "grunt": "^1.4.0",
+    "grunt-cli": "^1.4.2",
+    "grunt-contrib-watch": "^1.1.0"
   },
-  "devDependencies": {},
-  "scripts": {
-  
+  "devDependencies": {
+    "grunt-postcss": "^0.9.0",
+    "postcss": "^8.2.13"
   },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HH-IUPUI/group1.git"
@@ -19,5 +24,14 @@
   "bugs": {
     "url": "https://github.com/HH-IUPUI/group1/issues"
   },
-  "homepage": "https://github.com/HH-IUPUI/group1#readme"
+  "homepage": "https://github.com/HH-IUPUI/group1#readme",
+  "browsersList": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead",
+    "ie 11",
+    "android >= 4",
+    "Edge > 12"
+  ]
 }
