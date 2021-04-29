@@ -1,44 +1,44 @@
 body {
-	background-color: #ddffbc;
+  background-color: #ddffbc;
 }
 #staticHeader {
-	background-color: white;
+  background-color: white;
 }
-#staticHeader nav{
-	background-color: white;
+#staticHeader nav {
+  background-color: white;
 }
-#headerCountrySearch  {
-	background-color: white;
+#headerCountrySearch {
+  background-color: white;
 }
 #staticHeader nav a {
-	background-color: white;
+  background-color: white;
 }
 main section {
-	background-color: white;
+  background-color: white;
 }
 #headerNav a {
-	color:  #52734d;
+  color: #52734d;
 }
 #headerNav a:hover {
-	background-color: #ddffbc;
+  background-color: #ddffbc;
 }
 main #pageTitleWrapper {
-	background-color: #ddffbc;
+  background-color: #ddffbc;
 }
 main #pageTitleWrapper a {
-	color:  #52734d;
+  color: #52734d;
 }
 .minmax {
-	background-color: #ddffbc;
+  background-color: #ddffbc;
 }
 
-.minmax:hover{
-	background-color: #91c788;
+.minmax:hover {
+  background-color: #91c788;
 }
 footer {
-	background-color: #52734d;
-	color:#ddffbc;
+  background-color: #52734d;
+  color: #ddffbc;
 }
 footer a {
-	color:#ddffbc;
+  color: #ddffbc;
 }
