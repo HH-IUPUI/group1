@@ -152,10 +152,15 @@
     </main>
     <footer>
       <div id="footerInfo">
-        Copyright &copy; 2021 Culture Guide. Supported by a collaboration
-        between <a href="#">HH</a> and <a href="#">IUPUI</a> Universities.
-        Special thanks to <a href="#">Dr. Kasper Valtakari</a> and
-        <a href="#">Dr. William Helling</a>.
+        <p>
+		  Copyright &copy; 2021 Culture Guide. Supported by a collaboration between <a href="https://www.haaga-helia.fi/en/information-technology-and-digital-services" target="_blank" rel="noopener noreferrer">HH</a> and <a href="https://soic.iupui.edu/" target="_blank" rel="noopener noreferrer">IUPUI</a> Universities.
+		</p>
+		<p>
+		  Special thanks to <a href="https://www.haaga-helia.fi/fi/yhteystiedot/kasper-valtakari" target="_blank" rel="noopener noreferrer">Dr. Kasper Valtakari</a> and <a href="https://soic.iupui.edu/people/william-helling/" target="_blank" rel="noopener noreferrer">Dr. William Helling</a>.
+		</p>
+		<p>
+		  Photos used with permission from <a href="https://pixabay.com/" target="_blank" rel="noopener noreferrer">Pixabay.com</a>.
+		</p>
       </div>
       <nav id="footerNav" aria-label="Footer General Navigation">
         <ul id="footerNavList">
