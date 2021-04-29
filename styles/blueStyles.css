@@ -1,23 +1,22 @@
 body {
-	background-color: #e6eaf3;
+  background-color: #e6eaf3;
 }
 main section {
-	background-color: white;
+  background-color: white;
 }
 footer {
-	background-color: #c1c8e2;
+  background-color: #c1c8e2;
 }
 #headerNav a:hover {
-	background-color: #e6eaf3;
+  background-color: #e6eaf3;
 }
 main #pageTitleWrapper {
-	background-color: #e6eaf3;
+  background-color: #e6eaf3;
 }
 .minmax {
-
-	background-color: #e6eaf3;
+  background-color: #e6eaf3;
 }
 
-.minmax:hover{
-	background-color: #c1c8e2;
+.minmax:hover {
+  background-color: #c1c8e2;
 }

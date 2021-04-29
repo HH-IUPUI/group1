@@ -3,10 +3,9 @@
 
 // JS display toggle
 
-$(document).ready(function(){
-	$(".hideJS").addClass("showJS");
+$(document).ready(function () {
+  $(".hideJS").addClass("showJS");
 });
-
 
 //Filter Function(courtesy W3 schools)
 
@@ -16,7 +15,7 @@ function itemFilter(inputLocation, listULID) {
   input = document.getElementById(inputLocation);
   filter = input.value.toUpperCase();
   ul = document.getElementById(listULID);
-  li = ul.getElementsByTagName('li');
+  li = ul.getElementsByTagName("li");
 
   // Loop through all list items, and hide those who don't match the search query
   for (i = 0; i < li.length; i++) {
@@ -36,7 +35,7 @@ function cardFilter() {
   input = document.getElementById("search-box_bar");
   filter = input.value.toUpperCase();
   ul = document.getElementById("search-card-area");
-  li = ul.getElementsByTagName('div');
+  li = ul.getElementsByTagName("div");
 
   // Loop through all list items, and hide those who don't match the search query
   for (i = 0; i < li.length; i++) {
