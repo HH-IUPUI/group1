@@ -20,7 +20,6 @@ module.exports = function (grunt) {
   grunt.registerTask("default", ["postcss"]);
 };
 
-
 // run script:
 // open command prompt as administrator
 // cd to file

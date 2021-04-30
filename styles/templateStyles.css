@@ -162,7 +162,7 @@ li {
 }
 
 em {
-  font-style:italic;
+  font-style: italic;
 }
 
 /* Hide JavaScript if Disabled */
@@ -382,7 +382,7 @@ section p {
 }
 
 section li {
-  margin:1em;
+  margin: 1em;
   line-height: 1.5em;
 }
 
